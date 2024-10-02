@@ -1,0 +1,476 @@
+<html><head><base href="mailto:alexis.gerez@example.com/alexis.gerez@example.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio de Alexis Fernando Gerez</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+  :root {
+    --primary-color: #1a237e;
+    --secondary-color: #f5f5f5;
+    --accent-color: #4a90e2;
+    --text-color: #333;
+    --background-color: #ffffff;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+  }
+
+  header {
+    background-image: url('https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(26, 35, 126, 0.7);
+  }
+
+  header h1, header p {
+    position: relative;
+    z-index: 1;
+  }
+
+  nav {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    margin: 0.5rem;
+  }
+
+  nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  nav ul li a:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+
+  section {
+    background-color: var(--secondary-color);
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  h1, h2, h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  .highlight {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+  }
+
+  .skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skill-item {
+    background-color: var(--secondary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .skill-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+
+  .skill-item p {
+    margin: 0;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+
+  .trabajos-container, .estudios-container, .certificados-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .trabajo-item, .estudio-item, .certificado-item {
+    background-color: var(--background-color);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .trabajo-item:hover, .estudio-item:hover, .certificado-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+
+  .contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .contact-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .contact-button:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+  }
+
+  .contact-button i {
+    margin-right: 0.5rem;
+  }
+
+  #inicio {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .inicio-content {
+    flex: 1;
+  }
+
+  .inicio-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .certificado-item img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav ul li {
+      margin: 0.5rem 0;
+    }
+
+    header {
+      padding: 3rem 1rem;
+    }
+
+    main {
+      padding: 0 1rem;
+    }
+
+    section {
+      padding: 1.5rem;
+    }
+
+    .contact-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-button {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+    }
+
+    #inicio {
+      flex-direction: column-reverse;
+    }
+
+    .inicio-image {
+      margin-bottom: 1rem;
+    }
+
+    .inicio-image img {
+      max-width: 200px;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Portfolio de Alexis Fernando Gerez</h1>
+    <p>Analista de Datos | Especialista en Electrónica Educativa | Soluciones Basadas en Datos</p>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#trabajos">Trabajos</a></li>
+      <li><a href="#estudios">Estudios</a></li>
+      <li><a href="#certificados">Certificados</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <section id="inicio">
+      <div class="inicio-content">
+        <h2>Hola, soy Alexis</h2>
+        <p class="highlight">Analista de Datos y Desarrollador de Soluciones Tecnológicas</p>
+        <p>Bienvenido a mi espacio digital, donde comparto mi pasión por el análisis de datos y la tecnología educativa. Explora mi trabajo, proyectos y conoce más sobre cómo transformo datos en soluciones significativas.</p>
+        <div class="contact-buttons">
+          <a href="https://example.com/curriculum" class="contact-button" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-file-alt"></i> Mi Curriculum
+          </a>
+          <a href="https://www.linkedin.com/in/alexisgerez" class="contact-button" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="mailto:alexis.gerez@example.com" class="contact-button">
+            <i class="fas fa-envelope"></i> Gmail
+          </a>
+        </div>
+      </div>
+      <div class="inicio-image">
+        <img src="/a/aabec3c9-f3da-4852-932f-51bafa939a53" alt="Alexis Fernando Gerez" width="300" height="300">
+      </div>
+    </section>
+    
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>Soy un Analista de Datos con más de 12 años de experiencia en la industria automotriz y en la educación técnica, especializado en el desarrollo de soluciones tecnológicas basadas en datos y programación en C++ y Python. Mi objetivo es combinar mis habilidades analíticas y técnicas para resolver problemas complejos y optimizar procesos en diversas industrias, especialmente en análisis de datos, educación tecnológica, y electrónica educativa.</p>
+      <p>A lo largo de mi carrera, he desarrollado una pasión por la transformación de datos en insights accionables. Mi experiencia en la industria automotriz me ha permitido comprender profundamente los procesos industriales y cómo el análisis de datos puede mejorar la eficiencia operativa. Paralelamente, mi trabajo en educación técnica me ha brindado una perspectiva única sobre cómo integrar la tecnología en el aprendizaje y cómo preparar a las futuras generaciones para un mundo cada vez más impulsado por los datos.</p>
+      <p>Me considero un aprendiz continuo, siempre buscando nuevas formas de mejorar mis habilidades y mantenerme al día con las últimas tendencias en tecnología y análisis de datos. Disfruto especialmente de los desafíos que implican la resolución creativa de problemas y la implementación de soluciones innovadoras.</p>
+      <p>Fuera del ámbito profesional, soy un entusiasta de la tecnología DIY y participo activamente en proyectos de electrónica y programación en mi tiempo libre. También me apasiona compartir conocimientos, y frecuentemente participo en talleres y seminarios como instructor, ayudando a otros a desarrollar sus habilidades en análisis de datos y programación.</p>
+    </section>
+    
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        <div class="skill-item animate__animated animate__fadeInUp">
+          <i class="fas fa-chart-line"></i>
+          <p>Análisis de Datos<br>(Data Analysis)</p>
+        </div>
+        <div class="skill-item animate__animated animate__fadeInUp">
+          <i class="fas fa-code"></i>
+          <p>Programación en<br>Python y C++</p>
+        </div>
+        <div class="skill-item animate__animated animate__fadeInUp">
+          <i class="fas fa-chart-bar"></i>
+          <p>Visualización de Datos<br>(Data Visualization)</p>
+        </div>
+        <div class="skill-item animate__animated animate__fadeInUp">
+          <i class="fas fa-brain"></i>
+          <p>Machine Learning</p>
+        </div>
+        <div class="skill-item animate__animated animate__fadeInUp">
+          <i class="fas fa-database"></i>
+          <p>SQL</p>
+        </div>
+        <div class="skill-item animate__animated animate__fadeInUp">
+          <i class="fab fa-r-project"></i>
+          <p>R</p>
+        </div>
+      </div>
+    </section>
+    
+    <section id="trabajos">
+      <h2>Trabajos</h2>
+      <div class="trabajos-container">
+        <div class="trabajo-item">
+          <h3>Optimización de Control de Motores con Arduino</h3>
+          <p>Proyecto centrado en mejorar la eficiencia de sistemas de control de motores usando Arduino y C++. Realicé análisis de datos de rendimiento del sistema para ajustar los parámetros de control, mejorando la eficiencia operativa en un 15%.</p>
+        </div>
+        <div class="trabajo-item">
+          <h3>Predicción de Retención de Empleados usando Machine Learning</h3>
+          <p>Utilicé modelos de regresión logística y random forest para predecir la retención de empleados en una empresa del sector automotriz, logrando una precisión del 86%. Los resultados permitieron desarrollar estrategias para mejorar la satisfacción y retención de empleados.</p>
+        </div>
+        <div class="trabajo-item">
+          <h3>Visualización de Datos para la Industria Automotriz</h3>
+          <p>Creación de dashboards interactivos en Tableau para analizar los principales indicadores de desempeño en la industria automotriz. El objetivo era facilitar la toma de decisiones basadas en datos en áreas de mantenimiento y eficiencia operativa.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section id="estudios">
+      <h2>Estudios</h2>
+      <div class="estudios-container">
+        <div class="estudio-item">
+          <h3>Licenciado en Relaciones del Trabajo</h3>
+          <p>Universidad Metropolitana para la Educación y el Trabajo (UMET), 2019-2023</p>
+        </div>
+        <div class="estudio-item">
+          <h3>Profesor en Disciplinas Industriales</h3>
+          <p>Universidad Tecnológica Nacional (UTN), 2016-2020</p>
+        </div>
+        <div class="estudio-item">
+          <h3>Técnico Superior en Automotores, Mecánica y Máquinas Térmicas</h3>
+          <p>Universidad Tecnológica Nacional (UTN), 2013-2015</p>
+        </div>
+      </div>
+    </section>
+    
+    <section id="certificados">
+      <h2>Certificados</h2>
+      <div class="certificados-container">
+        <div class="certificado-item">
+          <h3>Certificación en Análisis de Datos con R</h3>
+          <p>Plataforma de Aprendizaje Online, 2022</p>
+        </div>
+        <div class="certificado-item">
+          <h3>Certificación en Machine Learning</h3>
+          <p>Google Machine Learning Professional Certificate, 2023</p>
+        </div>
+        <div class="certificado-item">
+          <h3>Google Data Analytics</h3>
+          <p>Plataforma de Google, 2023</p>
+          <img src="/a/3c0e29aa-96a6-4c4d-8f3b-e25a9120392b" alt="Certificado profesional de Google Data Analytics" width="100%" height="auto">
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>© 2023 Alexis Fernando Gerez. Todos los derechos reservados.</p>
+  </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+  // Smooth scrolling for navigation links
+  document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: 'smooth'
+        });
+      } else if (targetId === 'inicio') {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+
+  // Add animation to skill items
+  const skillItems = document.querySelectorAll('.skill-item');
+  skillItems.forEach((item, index) => {
+    item.style.animationDelay = `${index * 0.1}s`;
+  });
+
+  // Add hover effect to work items
+  const trabajoItems = document.querySelectorAll('.trabajo-item');
+  trabajoItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      item.style.transform = 'scale(1.05)';
+      item.style.transition = 'transform 0.3s ease';
+    });
+    item.addEventListener('mouseleave', () => {
+      item.style.transform = 'scale(1)';
+    });
+  });
+
+  // Lazy loading for certificate images (if you decide to add them later)
+  const certificateImages = document.querySelectorAll('.certificado-item img');
+  const lazyLoad = target => {
+    const io = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          const src = img.getAttribute('data-lazy');
+          img.setAttribute('src', src);
+          img.classList.add('fade');
+          observer.disconnect();
+        }
+      });
+    });
+    io.observe(target);
+  };
+  certificateImages.forEach(lazyLoad);
+});
+</script>
+</body></html>
