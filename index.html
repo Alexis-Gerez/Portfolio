@@ -1,3 +1,4 @@
+
 <html><head><base href="mailto:alexis.gerez@example.com/alexis.gerez@example.com">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -119,32 +120,26 @@
   }
 
   .skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .skills-column {
+    width: 50%;
   }
 
   .skill-item {
-    background-color: var(--secondary-color);
-    border: 2px solid var(--primary-color);
-    border-radius: 10px;
-    padding: 1.5rem;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
-    flex-direction: column;
     align-items: center;
-  }
-
-  .skill-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
   }
 
   .skill-item i {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     color: var(--primary-color);
-    margin-bottom: 1rem;
   }
 
   .skill-item p {
@@ -277,6 +272,32 @@
     background-color: var(--primary-color);
   }
 
+  .slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+  }
+
+  .slider-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+  .slider-arrow-left {
+    left: 10px;
+  }
+
+  .slider-arrow-right {
+    right: 10px;
+  }
+
   @media (max-width: 768px) {
     nav ul {
       flex-direction: column;
@@ -321,6 +342,10 @@
     .inicio-image img {
       max-width: 200px;
     }
+
+    .skills-container {
+      flex-direction: column;
+    }
   }
 </style>
 </head>
@@ -360,7 +385,7 @@
         </div>
       </div>
       <div class="inicio-image">
-        <img src="https://github.com/Alexis-Gerez/Portfolio/blob/Portfolio/Fotodeperfil.png?raw=true" alt="Alexis Fernando Gerez" width="300" height="300">
+        <img src="/path/to/profile-image.jpg" alt="Alexis Fernando Gerez" width="300" height="300">
       </div>
     </section>
     
@@ -375,29 +400,59 @@
     <section id="skills">
       <h2>Skills</h2>
       <div class="skills-container">
-        <div class="skill-item animate__animated animate__fadeInUp">
-          <i class="fas fa-chart-line"></i>
-          <p>Análisis de Datos<br>(Data Analysis)</p>
+        <div class="skills-column">
+          <h3>Habilidades Técnicas</h3>
+          <div class="skill-item animate__animated animate__fadeInUp">
+            <i class="fas fa-chart-line"></i>
+            <p>Análisis de Datos<br>(Data Analysis)</p>
+          </div>
+          <div class="skill-item animate__animated animate__fadeInUp">
+            <i class="fas fa-code"></i>
+            <p>Programación en<br>Python y C++</p>
+          </div>
+          <div class="skill-item animate__animated animate__fadeInUp">
+            <i class="fas fa-chart-bar"></i>
+            <p>Visualización de Datos<br>(Data Visualization)</p>
+          </div>
+          <div class="skill-item animate__animated animate__fadeInUp">
+            <i class="fas fa-brain"></i>
+            <p>Machine Learning</p>
+          </div>
+          <div class="skill-item animate__animated animate__fadeInUp">
+            <i class="fas fa-database"></i>
+            <p>SQL</p>
+          </div>
+          <div class="skill-item animate__animated animate__fadeInUp">
+            <i class="fab fa-r-project"></i>
+            <p>R</p>
+          </div>
         </div>
-        <div class="skill-item animate__animated animate__fadeInUp">
-          <i class="fas fa-code"></i>
-          <p>Programación en<br>Python y C++</p>
-        </div>
-        <div class="skill-item animate__animated animate__fadeInUp">
-          <i class="fas fa-chart-bar"></i>
-          <p>Visualización de Datos<br>(Data Visualization)</p>
-        </div>
-        <div class="skill-item animate__animated animate__fadeInUp">
-          <i class="fas fa-brain"></i>
-          <p>Machine Learning</p>
-        </div>
-        <div class="skill-item animate__animated animate__fadeInUp">
-          <i class="fas fa-database"></i>
-          <p>SQL</p>
-        </div>
-        <div class="skill-item animate__animated animate__fadeInUp">
-          <i class="fab fa-r-project"></i>
-          <p>R</p>
+        <div class="skills-column">
+          <h3>Habilidades Blandas</h3>
+          <div class="skill-item animate__animated animate__fadeInUp">
+            <i class="fas fa-comments"></i>
+            <p>Comunicación Efectiva</p>
+          </div>
+          <div class="skill-item animate__animated animate__fadeInUp">
+            <i class="fas fa-puzzle-piece"></i>
+            <p>Resolución de Problemas</p>
+          </div>
+          <div class="skill-item animate__animated animate__fadeInUp">
+            <i class="fas fa-users"></i>
+            <p>Trabajo en Equipo</p>
+          </div>
+          <div class="skill-item animate__animated animate__fadeInUp">
+            <i class="fas fa-lightbulb"></i>
+            <p>Pensamiento Crítico</p>
+          </div>
+          <div class="skill-item animate__animated animate__fadeInUp">
+            <i class="fas fa-project-diagram"></i>
+            <p>Gestión de Proyectos</p>
+          </div>
+          <div class="skill-item animate__animated animate__fadeInUp">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <p>Presentación de Datos</p>
+          </div>
         </div>
       </div>
     </section>
@@ -438,41 +493,37 @@
       </div>
     </section>
     
-   <section id="certificados">
-  <h2>Certificados</h2>
-  <div class="slider-container">
-    <!-- Flechas para deslizar manualmente -->
-    <button class="slider-prev">&#10094;</button>
-    <div class="slider">
-      <div class="slider-item">
-        <img src="https://github.com/Alexis-Gerez/Portfolio/blob/Portfolio/Coursera%20Certificado%20Google%20Data%20Analytics_page-0001.jpg?raw=true" alt="Google Data Analytics Certificate">
-        <h3>Google Data Analytics</h3>
-        <p>Certificación profesional en análisis de datos de Google</p>
-        <a href="https://coursera.org/share/cf11f94404ac9fa6b7a9ddef9342aa3d" target="_blank" rel="noopener noreferrer">Ver certificado</a>
+    <section id="certificados">
+      <h2>Certificados</h2>
+      <div class="slider-container">
+        <button class="slider-arrow slider-arrow-left">&lt;</button>
+        <div class="slider">
+          <div class="slider-item">
+            <img src="/path/to/google-data-analytics.jpg" alt="Google Data Analytics Certificate">
+            <h3>Google Data Analytics</h3>
+            <p>Certificación profesional en análisis de datos de Google</p>
+            <a href="https://coursera.org/share/cf11f94404ac9fa6b7a9ddef9342aa3d" target="_blank" rel="noopener noreferrer">Ver certificado</a>
+          </div>
+          <div class="slider-item">
+            <img src="/path/to/machine-learning-practicalities.jpg" alt="Aspectos prácticos del aprendizaje automático">
+            <h3>Aspectos prácticos del aprendizaje automático</h3>
+            <p>Curso sobre implementación práctica de machine learning</p>
+            <a href="https://coursera.org/share/f5297db4ab8b34f1006981c24dc645c4" target="_blank" rel="noopener noreferrer">Ver certificado</a>
+          </div>
+        </div>
+        <button class="slider-arrow slider-arrow-right">&gt;</button>
       </div>
-      <div class="slider-item">
-        <img src="https://github.com/Alexis-Gerez/Portfolio/blob/Portfolio/Coursera%20Machine%20Learning_page-0001.jpg?raw=true" alt="Aspectos prácticos del aprendizaje automático">
-        <h3>Aspectos prácticos del aprendizaje automático</h3>
-        <p>Curso sobre implementación práctica de machine learning</p>
-        <a href="https://coursera.org/share/f5297db4ab8b34f1006981c24dc645c4" target="_blank" rel="noopener noreferrer">Ver certificado</a>
-      </div>
-      <div class="slider-item">
-        <img src="https://github.com/Alexis-Gerez/Portfolio/blob/Portfolio/Coursera%20Fundamentos%20de%20la%20Ciencia%20de%20datos_page-0001.jpg?raw=true" alt="Fundamentos de la Ciencia de Datos">
-        <h3>Fundamentos de la Ciencia de Datos</h3>
-        <p>Curso introductorio sobre Ciencia de Datos</p>
-        <a href="https://coursera.org/share/4b8a7e056274b3c4eb792dc8375eb167" target="_blank" rel="noopener noreferrer">Ver certificado</a>
-      </div>
-      <!-- Agrega más certificados aquí si es necesario -->
-    </div>
-    <button class="slider-next">&#10095;</button>
-  </div>
-</section>
+    </section>
+  </main>
+  
+  <footer>
+    <p>© 2023 Alexis Fernando Gerez. Todos los derechos reservados.</p>
+  </footer>
 
 <script>
 document.addEventListener('DOMContentLoaded', (event) => {
   // Smooth scrolling for navigation links
-  document.querySelectorAll('nav a[href^="#"]').forEach
-  (anchor => {
+  document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const targetId = this.getAttribute('href').substring(1);
@@ -488,7 +539,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
       }
     });
-  }));
+  });
 
   // Add animation to skill items
   const skillItems = document.querySelectorAll('.skill-item');
@@ -499,48 +550,49 @@ document.addEventListener('DOMContentLoaded', (event) => {
   // Slider functionality
   const slider = document.querySelector('.slider');
   const sliderItems = document.querySelectorAll('.slider-item');
-  const prevBtn = document.querySelector('.slider-prev');
-  const nextBtn = document.querySelector('.slider-next');
+  const prevButton = document.querySelector('.slider-arrow-left');
+  const nextButton = document.querySelector('.slider-arrow-right');
   let currentIndex = 0;
   let interval;
 
   function showSlide(index) {
-    if (index >= sliderItems.length) {
-      currentIndex = 0;
-    } else if (index < 0) {
-      currentIndex = sliderItems.length - 1;
-    }
-    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+    slider.style.transform = `translateX(-${index * 100}%)`;
   }
 
   function nextSlide() {
-    currentIndex++;
+    currentIndex = (currentIndex + 1) % sliderItems.length;
     showSlide(currentIndex);
   }
 
   function prevSlide() {
-    currentIndex--;
+    currentIndex = (currentIndex - 1 + sliderItems.length) % sliderItems.length;
     showSlide(currentIndex);
   }
 
   function startSlider() {
-    interval = setInterval(nextSlide, 3000); // Cambio automático cada 3 segundos
+    interval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
   }
 
   function stopSlider() {
     clearInterval(interval);
   }
 
-  // Iniciar slider automático
+  sliderItems.forEach(item => {
+    item.addEventListener('mouseenter', stopSlider);
+    item.addEventListener('mouseleave', startSlider);
+  });
+
+  prevButton.addEventListener('click', () => {
+    stopSlider();
+    prevSlide();
+  });
+
+  nextButton.addEventListener('click', () => {
+    stopSlider();
+    nextSlide();
+  });
+
   startSlider();
-
-  // Detener slider al posicionarse con el cursor y reiniciar cuando se quite
-  slider.addEventListener('mouseenter', stopSlider);
-  slider.addEventListener('mouseleave', startSlider);
-
-  // Botones de navegación manual
-  nextBtn.addEventListener('click', nextSlide);
-  prevBtn.addEventListener('click', prevSlide);
 });
 </script>
 </body></html>
