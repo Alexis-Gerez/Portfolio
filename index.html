@@ -1,281 +1,304 @@
-<html><head><base href="mailto:alexis.gerez@example.com/alexis.gerez@example.com">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio de Alexis Fernando Gerez</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+<html>
+<head>
+  <base href="mailto:alexis.gerez@example.com/alexis.gerez@example.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio de Alexis Fernando Gerez</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-  :root {
-    --primary-color: #1a237e;
-    --secondary-color: #f5f5f5;
-    --accent-color: #4a90e2;
-    --text-color: #333;
-    --background-color: #ffffff;
-  }
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
-  }
-
-  header {
-    background-image: url('https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-    background-size: cover;
-    background-position: center;
-    color: var(--secondary-color);
-    text-align: center;
-    padding: 4rem 2rem;
-    position: relative;
-  }
-
-  header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(26, 35, 126, 0.7);
-  }
-
-  header h1, header p {
-    position: relative;
-    z-index: 1;
-  }
-
-  nav {
-    background-color: var(--primary-color);
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-
-  nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  nav ul li {
-    margin: 0.5rem;
-  }
-
-  nav ul li a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-
-  nav ul li a:hover {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-  }
-
-  main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 2rem;
-  }
-
-  section {
-    background-color: var(--secondary-color);
-    margin-bottom: 2rem;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-
-  h1, h2, h3 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-  }
-
-  p {
-    margin-bottom: 1rem;
-  }
-
-  .highlight {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: var(--accent-color);
-    margin-bottom: 1.5rem;
-  }
-
-  .skills-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .skill-item {
-    background-color: var(--secondary-color);
-    border: 2px solid var(--primary-color);
-    border-radius: 10px;
-    padding: 1.5rem;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .skill-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  }
-
-  .skill-item i {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-  }
-
-  .skill-item p {
-    margin: 0;
-    font-weight: bold;
-    color: var(--text-color);
-  }
-
-  .trabajos-container, .estudios-container, .certificados-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-  }
-
-  .trabajo-item, .estudio-item, .certificado-item {
-    background-color: var(--background-color);
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .trabajo-item:hover, .estudio-item:hover, .certificado-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  }
-
-  footer {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-  }
-
-  .contact-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-
-  .contact-button {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    background-color: var(--accent-color);
-    color: var(--secondary-color);
-    text-decoration: none;
-    border-radius: 20px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-
-  .contact-button:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-3px);
-  }
-
-  .contact-button i {
-    margin-right: 0.5rem;
-  }
-
-  #inicio {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .inicio-content {
-    flex: 1;
-  }
-
-  .inicio-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-
-  .certificado-item img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-
-  @media (max-width: 768px) {
-    nav ul {
-      flex-direction: column;
-      align-items: center;
+    :root {
+      --primary-color: #1a237e;
+      --secondary-color: #f5f5f5;
+      --accent-color: #4a90e2;
+      --text-color: #333;
+      --background-color: #ffffff;
     }
 
-    nav ul li {
-      margin: 0.5rem 0;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: var(--text-color);
+      background-color: var(--background-color);
     }
 
     header {
-      padding: 3rem 1rem;
+      background-image: url('https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      color: var(--secondary-color);
+      text-align: center;
+      padding: 4rem 2rem;
+      position: relative;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(26, 35, 126, 0.7);
+    }
+
+    header h1, header p {
+      position: relative;
+      z-index: 1;
+    }
+
+    nav {
+      background-color: var(--primary-color);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0.5rem;
+    }
+
+    nav ul li a {
+      color: var(--secondary-color);
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: var(--accent-color);
+      color: var(--primary-color);
     }
 
     main {
-      padding: 0 1rem;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
     }
 
     section {
-      padding: 1.5rem;
+      background-color: var(--secondary-color);
+      margin-bottom: 2rem;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    .contact-buttons {
+    h1, h2, h3 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    .highlight {
+      font-size: 1.2em;
+      font-weight: bold;
+      color: var(--accent-color);
+      margin-bottom: 1.5rem;
+    }
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-item {
+      background-color: var(--secondary-color);
+      border: 2px solid var(--primary-color);
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
       flex-direction: column;
       align-items: center;
     }
 
-    .contact-button {
-      width: 100%;
-      justify-content: center;
-      margin-bottom: 0.5rem;
+    .skill-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
 
-    #inicio {
-      flex-direction: column-reverse;
-    }
-
-    .inicio-image {
+    .skill-item i {
+      font-size: 2.5rem;
+      color: var(--primary-color);
       margin-bottom: 1rem;
     }
 
-    .inicio-image img {
-      max-width: 200px;
+    .skill-item p {
+      margin: 0;
+      font-weight: bold;
+      color: var(--text-color);
     }
-  }
-</style>
+
+    .trabajos-container, .estudios-container, .certificados-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .trabajo-item, .estudio-item, .certificado-item {
+      background-color: var(--background-color);
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .trabajo-item:hover, .estudio-item:hover, .certificado-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .contact-button {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      background-color: var(--accent-color);
+      color: var(--secondary-color);
+      text-decoration: none;
+      border-radius: 20px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .contact-button:hover {
+      background-color: var(--primary-color);
+      transform: translateY(-3px);
+    }
+
+    .contact-button i {
+      margin-right: 0.5rem;
+    }
+
+    #inicio {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .inicio-content {
+      flex: 1;
+    }
+
+    .inicio-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      padding: 20px 0;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .swiper-slide img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .swiper-slide p {
+      font-size: 16px;
+      color: #333;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin: 0.5rem 0;
+      }
+
+      header {
+        padding: 3rem 1rem;
+      }
+
+      main {
+        padding: 0 1rem;
+      }
+
+      section {
+        padding: 1.5rem;
+      }
+
+      .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-button {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 0.5rem;
+      }
+
+      #inicio {
+        flex-direction: column-reverse;
+      }
+
+      .inicio-image {
+        margin-bottom: 1rem;
+      }
+
+      .inicio-image img {
+        max-width: 200px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -320,9 +343,6 @@
     <section id="sobre-mi">
       <h2>Sobre mí</h2>
       <p>Soy un Analista de Datos con más de 12 años de experiencia en la industria automotriz y en la educación técnica, especializado en el desarrollo de soluciones tecnológicas basadas en datos y programación en C++ y Python. Mi objetivo es combinar mis habilidades analíticas y técnicas para resolver problemas complejos y optimizar procesos en diversas industrias, especialmente en análisis de datos, educación tecnológica, y electrónica educativa.</p>
-      <p>A lo largo de mi carrera, he desarrollado una pasión por la transformación de datos en insights accionables. Mi experiencia en la industria automotriz me ha permitido comprender profundamente los procesos industriales y cómo el análisis de datos puede mejorar la eficiencia operativa. Paralelamente, mi trabajo en educación técnica me ha brindado una perspectiva única sobre cómo integrar la tecnología en el aprendizaje y cómo preparar a las futuras generaciones para un mundo cada vez más impulsado por los datos.</p>
-      <p>Me considero un aprendiz continuo, siempre buscando nuevas formas de mejorar mis habilidades y mantenerme al día con las últimas tendencias en tecnología y análisis de datos. Disfruto especialmente de los desafíos que implican la resolución creativa de problemas y la implementación de soluciones innovadoras.</p>
-      <p>Fuera del ámbito profesional, soy un entusiasta de la tecnología DIY y participo activamente en proyectos de electrónica y programación en mi tiempo libre. También me apasiona compartir conocimientos, y frecuentemente participo en talleres y seminarios como instructor, ayudando a otros a desarrollar sus habilidades en análisis de datos y programación.</p>
     </section>
     
     <section id="skills">
@@ -393,20 +413,32 @@
     
     <section id="certificados">
       <h2>Certificados</h2>
-      <div class="certificados-container">
-        <div class="certificado-item">
-          <h3>Certificación en Análisis de Datos con R</h3>
-          <p>Plataforma de Aprendizaje Online, 2022</p>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="https://coursera.org/share/cf11f94404ac9fa6b7a9ddef9342aa3d" target="_blank">
+              <img src="/path/to/certificado-image-1.png" alt="Google Data Analytics Certificate">
+              <p>Google Data Analytics</p>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://coursera.org/share/f5297db4ab8b34f1006981c24dc645c4" target="_blank">
+              <img src="/path/to/certificado-image-2.png" alt="Aspectos prácticos del aprendizaje automático">
+              <p>Aspectos prácticos del aprendizaje automático</p>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://coursera.org/share/4b8a7e056274b3c4eb792dc8375eb167" target="_blank">
+              <img src="/path/to/certificado-image-3.png" alt="Fundamentos de la Ciencia de Datos">
+              <p>Fundamentos de la Ciencia de Datos</p>
+            </a>
+          </div>
+          <!-- Añade más certificados aquí -->
         </div>
-        <div class="certificado-item">
-          <h3>Certificación en Machine Learning</h3>
-          <p>Google Machine Learning Professional Certificate, 2023</p>
-        </div>
-        <div class="certificado-item">
-          <h3>Google Data Analytics</h3>
-          <p>Plataforma de Google, 2023</p>
-          <img src="/a/3c0e29aa-96a6-4c4d-8f3b-e25a9120392b" alt="Certificado profesional de Google Data Analytics" width="100%" height="auto">
-        </div>
+        <!-- Botones de navegación -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
     </section>
   </main>
@@ -415,62 +447,36 @@
     <p>© 2023 Alexis Fernando Gerez. Todos los derechos reservados.</p>
   </footer>
 
-<script>
-document.addEventListener('DOMContentLoaded', (event) => {
-  // Smooth scrolling for navigation links
-  document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
-      if (targetElement) {
-        targetElement.scrollIntoView({
-          behavior: 'smooth'
-        });
-      } else if (targetId === 'inicio') {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      slidesPerView: 3,
+      spaceBetween: 30,
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
       }
     });
-  });
+  </script>
+</body>
+</html>
 
-  // Add animation to skill items
-  const skillItems = document.querySelectorAll('.skill-item');
-  skillItems.forEach((item, index) => {
-    item.style.animationDelay = `${index * 0.1}s`;
-  });
-
-  // Add hover effect to work items
-  const trabajoItems = document.querySelectorAll('.trabajo-item');
-  trabajoItems.forEach(item => {
-    item.addEventListener('mouseenter', () => {
-      item.style.transform = 'scale(1.05)';
-      item.style.transition = 'transform 0.3s ease';
-    });
-    item.addEventListener('mouseleave', () => {
-      item.style.transform = 'scale(1)';
-    });
-  });
-
-  // Lazy loading for certificate images (if you decide to add them later)
-  const certificateImages = document.querySelectorAll('.certificado-item img');
-  const lazyLoad = target => {
-    const io = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          const src = img.getAttribute('data-lazy');
-          img.setAttribute('src', src);
-          img.classList.add('fade');
-          observer.disconnect();
-        }
-      });
-    });
-    io.observe(target);
-  };
-  certificateImages.forEach(lazyLoad);
-});
-</script>
-</body></html>
