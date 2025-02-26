@@ -6,9 +6,9 @@ Portafolio personal de Alexis Fernando Gerez, Analista de Datos y Desarrollador 
 
 Aquí se encuentran proyectos educativos enfocados en Arduino y tecnología aplicada a la enseñanza:
 
-- **[Automatización con Arduino](https://tu-blog.blogspot.com/proyecto1)**: Proyecto de domótica con sensores y actuadores.
-- **[Simulación de Robots con Tinkercad](https://tu-blog.blogspot.com/proyecto2)**: Uso de Tinkercad para aprender sobre robótica.
-- **[Sistema de Iluminación Inteligente](https://tu-blog.blogspot.com/proyecto3)**: Control de luces con Arduino y sensores.
+- **[Automatización con Arduino]([https://tu-blog.blogspot.com/proyecto1](https://proyectosarduinofacil.blogspot.com/2024/09/proyecto-intermedio-control-de-nivel-de.html))**: Proyecto de domótica con sensores y actuadores.
+- **[Simulación de vehículo autónomo con Tinkercad]([https://tu-blog.blogspot.com/proyecto2](https://www.tinkercad.com/things/3JT8mpP1Gbr-avanzado-proyecto14-carrito-detector-de-obstaculos))**: Uso de Tinkercad para aprender sobre robótic, armado y simulación de un vehículo detector de objetos.
+- **[Sistema de Iluminación Inteligente]([https://tu-blog.blogspot.com/proyecto3](https://proyectosarduinofacil.blogspot.com/2024/08/proyecto-2d-ventana-automatizada.html))**: Control de luces con Arduino y sensores.
 
 ## 🔍 Análisis de Datos y Visualización
 
