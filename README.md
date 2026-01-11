@@ -1,29 +1,89 @@
-# Portfolio-Alexis
+# Alexis Fernando Gerez
 
-Portafolio personal de Alexis Fernando Gerez, Analista de Datos y Desarrollador de Soluciones Tecnológicas. Incluye proyectos en análisis de datos, visualización de datos y desarrollo de soluciones tecnológicas con Arduino. El sitio web fue creado para compartir mi experiencia en el campo de la tecnología y los datos.
+Technical Trainer | Operational Analyst | Automotive & Industrial Management  
+Automotive – Autoparts – Technical Education – Continuous Improvement
 
-## 📚 Proyectos Educativos y Tecnológicos
+---
 
-Aquí se encuentran proyectos educativos enfocados en Arduino y tecnología aplicada a la enseñanza:
+## Professional Profile
 
-- **[Automatización con Arduino](https://proyectosarduinofacil.blogspot.com/2024/09/proyecto-intermedio-control-de-nivel-de.html)**: Proyecto de domótica con sensores y actuadores.
-- **[Simulación de vehículo autónomo con Tinkercad](https://www.tinkercad.com/things/3JT8mpP1Gbr-avanzado-proyecto14-carrito-detector-de-obstaculos)**: Uso de Tinkercad para aprender sobre robótica, armado y simulación de un vehículo detector de objetos.
-- **[Sistema de Iluminación Inteligente](https://proyectosarduinofacil.blogspot.com/2024/08/proyecto-2d-ventana-automatizada.html)**: Control de luces con Arduino y sensores.
+I am a technical professional with more than 12 years of experience in the automotive industry and technical education.  
+My background combines hands-on workshop experience, operational leadership, technical training and data-driven analysis.
 
+My current professional focus is on:
+- Operational management in industrial and automotive environments
+- Technical training and knowledge transfer
+- Process optimization using data and continuous improvement principles (Kaizen)
 
-## 🔍 Análisis de Datos y Visualización
+I develop practical tools, dashboards and training materials oriented to real-world industrial scenarios.
 
-Incluye proyectos de análisis de datos en diferentes industrias:
+---
 
-- **[Optimización del Rendimiento Deportivo con Datos Biométricos](https://github.com/Alexis-Gerez/sports-performance-analytics)**: Uso de smartwatch para evaluar y mejorar el rendimiento en entrenamientos.
-- **[Análisis de Rendimiento de Ventas](https://github.com/Alexis-Gerez/proyecto-ventas)**: Estudio de tendencias en ventas para la industria automotriz.
-- **[Predicción de Patrones de Consumo](https://github.com/Alexis-Gerez/patrones-consumo)**: Uso de modelos predictivos para estimar hábitos de compra.
+## Core Areas of Expertise
 
-## 🌍 Análisis en Temáticas Sociales
+### Industrial & Automotive Operations
+- Workshop and technical team management
+- Task planning and workload distribution
+- Quality control and retrabajos analysis
+- Continuous improvement (Kaizen mindset)
+- Operational KPIs and performance tracking
 
-Proyectos relacionados con educación, medio ambiente y mercado laboral:
+### Technical Training & Education
+- Automotive mechanics (brakes, suspension, transmission)
+- Automotive electronics and diagnostics
+- Arduino and applied electronics for education
+- Design of technical courses and training programs
+- Adult and technical education methodologies
 
-- **[Impacto de la Educación en el Mercado Laboral](https://github.com/Alexis-Gerez/impacto-educacion)**: Evaluación de la correlación entre educación y empleabilidad.
-- **[Análisis de Factores Ambientales](https://github.com/Alexis-Gerez/factores-ambientales)**: Estudio del impacto de la contaminación en ciudades.
+### Data & Digital Tools
+- Python for operational analysis
+- Dashboards for decision-making
+- Data visualization for non-technical users
+- Process monitoring and performance metrics
 
-📌 Para más información, visita mi sitio web: [Mi Portafolio en GitHub](https://github.com/Alexis-Gerez/Portfolio/blob/Portfolio/README.md)
+---
+
+## Featured Projects
+
+This portfolio focuses on **applied projects**, not academic exercises.
+
+### 🔧 Operational Management Tools
+- Automotive Workshop Kaizen Dashboard  
+  Operational management tool designed for automotive workshops.  
+  Focused on task tracking, performance metrics and continuous improvement.
+
+### 🎓 Technical Training Projects
+- Automotive mechanics courses (suspension, brakes, diagnostics)
+- Automotive electronics and Arduino-based learning projects
+- Educational content and hands-on training materials
+
+### 📊 Applied Data Analysis
+- Dashboards for industrial decision-making
+- Performance and productivity analysis
+- Data-driven improvement initiatives
+
+---
+
+## Professional Approach
+
+My work philosophy is based on:
+- Practical solutions over theoretical models
+- Clear communication between technical and non-technical profiles
+- Continuous improvement through small, measurable changes
+- Training as a key driver of operational excellence
+
+---
+
+## Background
+
+- Automotive Technician (workshop experience)
+- Technical Instructor (secondary and adult education)
+- Degree in Labor Relations
+- Continuous training in data analysis and technology
+
+---
+
+## Contact & Links
+
+- LinkedIn: https://www.linkedin.com/in/alexis-gerez-9aa182153/
+- GitHub Projects: see repositories below
