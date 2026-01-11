@@ -834,6 +834,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
   });
 
   startSlider();
-});
+  
+  });
+
+   const gmailBtn = document.getElementById("gmail-btn");
+  const gmailText = document.getElementById("gmail-text");
+
+  gmailBtn.addEventListener("click", () => {
+    gmailText.style.display = 
+      gmailText.style.display === "none" ? "inline" : "none";
+
+  });
 </script>
 </body></html>
