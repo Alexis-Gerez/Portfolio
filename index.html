@@ -305,15 +305,40 @@
     }
     /* Slider */
     .slider-container {
-      max-width: 900px;
+      max-width: 600px;
+      /* Reduced width for "smaller size" requested */
       margin: 0 auto;
       background: var(--secondary-color);
-      padding: 1rem;
+      padding: 2rem;
       border-radius: 4px;
+      position: relative;
+      /* Ensure arrows position correctly */
+    }
+    .slider-item {
+      flex: 0 0 100%;
+      padding: 10px;
+      text-align: center;
     }
     .slider-item img {
-      border-radius: 2px;
+      border-radius: 4px;
       border: 1px solid var(--border-color);
+      max-height: 250px;
+      /* Limit height significantly */
+      width: auto;
+      max-width: 100%;
+      display: block;
+      margin: 0 auto 1.5rem auto;
+      /* Center image */
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .slider-item h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+    .slider-item p {
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
     }
     /* Responsive */
     @media (max-width: 768px) {
@@ -344,6 +369,9 @@
       }
       .trabajos-container {
         grid-template-columns: 1fr;
+      }
+      .slider-container {
+        padding: 1rem;
       }
     }
   </style>
@@ -683,13 +711,12 @@
       <div class="slider-container">
         <button class="slider-arrow slider-arrow-left">&lt;</button>
         <div class="slider">
-          <!-- Keeping all existing slides -->
           <div class="slider-item">
             <img
               src="https://raw.githubusercontent.com/Alexis-Gerez/Portfolio/Portfolio/Coursera%20Analista%20Avanzado_page-0001.jpg"
               alt="Certificado profesional avanzado en análisis de datos">
             <h3>Google Advanced Data Analytics</h3>
-            <p>Certificación Profesional Avanzada</p>
+            <p>Certificación Profesional Avanzada en análisis predictivo y Python.</p>
             <a href="https://www.coursera.org/account/accomplishments/certificate/XRUTDINMN195" target="_blank"
               rel="noopener noreferrer">Ver certificado</a>
           </div>
@@ -698,7 +725,7 @@
               src="https://raw.githubusercontent.com/Alexis-Gerez/Portfolio/Portfolio/Coursera%20Certificado%20Google%20Data%20Analytics_page-0001.jpg"
               alt="Google Data Analytics Certificate">
             <h3>Google Data Analytics</h3>
-            <p>Certificación Profesional</p>
+            <p>Certificación Profesional completa sobre el ciclo de vida de los datos.</p>
             <a href="https://coursera.org/share/cf11f94404ac9fa6b7a9ddef9342aa3d" target="_blank"
               rel="noopener noreferrer">Ver certificado</a>
           </div>
@@ -707,7 +734,7 @@
               src="https://raw.githubusercontent.com/Alexis-Gerez/Portfolio/Portfolio/Coursera%20Machine%20Learning_page-0001.jpg"
               alt="Aspectos prácticos del aprendizaje automático">
             <h3>Machine Learning Practical Aspects</h3>
-            <p>Implementación práctica de modelos</p>
+            <p>Implementación práctica de modelos de aprendizaje automático y evaluación.</p>
             <a href="https://coursera.org/share/f5297db4ab8b34f1006981c24dc645c4" target="_blank"
               rel="noopener noreferrer">Ver certificado</a>
           </div>
@@ -716,17 +743,16 @@
               src="https://raw.githubusercontent.com/Alexis-Gerez/Portfolio/Portfolio/Coursera%20Fundamentos%20de%20la%20Ciencia%20de%20datos_page-0001.jpg"
               alt="Fundamentos de la Ciencia de Datos">
             <h3>Data Science Fundamentals</h3>
-            <p>Conceptos y técnicas clave</p>
+            <p>Conceptos clave para la toma de decisiones basada en datos.</p>
             <a href="https://coursera.org/share/4b8a7e056274b3c4eb792dc8375eb167" target="_blank"
               rel="noopener noreferrer">Ver certificado</a>
           </div>
-          <!-- More slides from original -->
           <div class="slider-item">
             <img
               src="https://raw.githubusercontent.com/Alexis-Gerez/Portfolio/Portfolio/Coursera%20Analisis%20de%20regresion_page-0001.jpg"
               alt="Análisis de Regresión">
             <h3>Análisis de Regresión</h3>
-            <p>Estadística avanzada para modelado de datos</p>
+            <p>Estadística avanzada para modelado de datos y predicciones.</p>
             <a href="https://coursera.org/share/5866bc4def9d48c1c22307b76c92ef1a" target="_blank"
               rel="noopener noreferrer">Ver certificado</a>
           </div>
@@ -735,7 +761,7 @@
               src="https://raw.githubusercontent.com/Alexis-Gerez/Portfolio/Portfolio/Coursera%20El%20poder%20de%20las%20estadisticas_page-0001.jpg"
               alt="El poder de las estadísticas">
             <h3>Estadística Aplicada</h3>
-            <p>Uso efectivo en análisis de datos</p>
+            <p>Uso efectivo de métodos estadísticos en el análisis de negocios.</p>
             <a href="https://coursera.org/share/99155957d2e9a5f3d5487f091f033a9f" target="_blank"
               rel="noopener noreferrer">Ver certificado</a>
           </div>
@@ -744,7 +770,7 @@
               src="https://raw.githubusercontent.com/Alexis-Gerez/Portfolio/Portfolio/Coursera%20Google%20Data%20Analytics%20Proyecto_page-0001.jpg"
               alt="Proyecto final de Google Data Analytics">
             <h3>Capstone Project</h3>
-            <p>Estudio de caso completo en análisis de datos</p>
+            <p>Estudio de caso completo aplicando todo el proceso de análisis.</p>
             <a href="https://coursera.org/share/a229e4a63dd8bd8d68794eb407332cb4" target="_blank"
               rel="noopener noreferrer">Ver certificado</a>
           </div>
@@ -753,8 +779,17 @@
               src="https://raw.githubusercontent.com/Alexis-Gerez/Portfolio/Portfolio/Coursera%20Data%20Analysis%20programando%20con%20R_page-0001.jpg"
               alt="Análisis de datos con programación R">
             <h3>R Programming for Data Analysis</h3>
-            <p>Programación estadística con R</p>
+            <p>Programación estadística, limpieza y visualización con R y RStudio.</p>
             <a href="https://coursera.org/share/08afe74e6d6c5f1405d8671a7c430950" target="_blank"
+              rel="noopener noreferrer">Ver certificado</a>
+          </div>
+          <div class="slider-item">
+            <img
+              src="https://raw.githubusercontent.com/Alexis-Gerez/Portfolio/Portfolio/Coursera%20Analizar%20datos%20a%20traves%20de%20preguntas_page-0001.jpg"
+              alt="Analizar datos para responder preguntas">
+            <h3>Analizar datos para responder preguntas</h3>
+            <p>Técnicas de pensamiento analítico para resolver problemas.</p>
+            <a href="https://coursera.org/share/2caea7183b5a121bf14b9e133e941e99" target="_blank"
               rel="noopener noreferrer">Ver certificado</a>
           </div>
           <div class="slider-item">
@@ -762,8 +797,26 @@
               src="https://raw.githubusercontent.com/Alexis-Gerez/Portfolio/Portfolio/Coursera%20Empezando%20Con%20Python_page-0001.jpg"
               alt="Introducción a Python">
             <h3>Python Programming</h3>
-            <p>Desarrollo y scripting con Python</p>
+            <p>Fundamentos de programación y scripting para automatización.</p>
             <a href="https://coursera.org/share/74f94faca8e254c81ab89fd89989a8d3" target="_blank"
+              rel="noopener noreferrer">Ver certificado</a>
+          </div>
+          <div class="slider-item">
+            <img
+              src="https://raw.githubusercontent.com/Alexis-Gerez/Portfolio/Portfolio/Coursera%20Vaya%20m%C3%A1s%20all%C3%A1%20de%20los%20n%C3%BAmeros_page-0001.jpg"
+              alt="Vaya más allá de los números">
+            <h3>Más allá de los números</h3>
+            <p>Interpretación y traducción de datos en insights de negocio.</p>
+            <a href="https://coursera.org/share/7af3252279baf2edd594ec0f8e66013a" target="_blank"
+              rel="noopener noreferrer">Ver certificado</a>
+          </div>
+          <div class="slider-item">
+            <img
+              src="https://raw.githubusercontent.com/Alexis-Gerez/Portfolio/Portfolio/Coursera%20compartir%20Datos%20a%20trav%C3%A9s%20del%20arte%20de%20la%20visualizacion_page-0001.jpg"
+              alt="Compartir datos a través de la visualización">
+            <h3>Visualización de Datos</h3>
+            <p>Diseño de dashboards efectivos y storytelling con datos.</p>
+            <a href="https://coursera.org/share/d97111aedfb44c672c8a98a1496383f8" target="_blank"
               rel="noopener noreferrer">Ver certificado</a>
           </div>
           <div class="slider-item">
@@ -771,7 +824,7 @@
               src="https://raw.githubusercontent.com/Alexis-Gerez/Portfolio/Portfolio/Certificado%20profesional%20avanzado%20an%C3%A1lisis%20de%20datos.jpg"
               alt="Certificado profesional avanzado en análisis de datos">
             <h3>Proyecto Final Avanzado</h3>
-            <p>Google Advanced Data Analytics Capstone</p>
+            <p>Capstone final demostrando dominio completo de herramientas avanzadas.</p>
             <a href="https://www.coursera.org/account/accomplishments/certificate/XRUTDINMN195" target="_blank"
               rel="noopener noreferrer">Ver certificado</a>
           </div>
