@@ -377,7 +377,29 @@
       .slider-container {
         padding: 1rem;
       }
-    }
+      .categoria-principal {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+  align-items: center;
+}
+
+.categoria-img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.ver-mas {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.hidden {
+  display: none;
+}
   </style>
 </head>
 <body>
@@ -519,15 +541,28 @@
 <div class="proyecto-categoria">
 
   <h3>Desarrollo Tecnológico & Educación Técnica</h3>
-  <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 2rem;">
-    Proyectos y cursos orientados a la formación técnica, combinando automatización, electrónica y mecánica automotriz.
+  <p class="section-description">
+    Proyectos y cursos orientados a la formación técnica, combinando automatización,
+    electrónica y mecánica automotriz aplicada.
   </p>
 
-  <!-- SUBSECTION 1 -->
-  <h4 style="margin-bottom: 0.5rem;">Formación Tecnológica y Automatización Industrial</h4>
-  <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 1.2rem;">
-    Proyectos educativos enfocados en programación, control y simulación de procesos industriales mediante tecnologías IoT.
-  </p>
+  <!-- CARD NIVEL 1 -->
+  <div class="trabajo-item categoria-principal" onclick="toggleSection('automatizacion')">
+    <img src="img/automatizacion-industrial.jpg" alt="Automatización Industrial" class="categoria-img">
+
+    <div>
+      <h4>Formación Tecnológica y Automatización Industrial</h4>
+      <p>
+        Proyectos educativos enfocados en programación, control, sensores y simulación
+        de procesos industriales mediante tecnologías IoT y microcontroladores.
+      </p>
+      <span class="ver-mas">Ver proyectos ▾</span>
+    </div>
+  </div>
+
+  <!-- CONTENIDO DESPLEGABLE -->
+  <div id="automatizacion" class="trabajos-container hidden">
+    <!-- Acá van tus proyectos STEM actuales -->
 
   <div class="trabajos-container">
     <div class="trabajo-item">
@@ -913,6 +948,10 @@
         }
         function stopSlider() {
           clearInterval(interval);
+        }
+        function toggleSection(id) {
+        const section = document.getElementById(id);
+        section.classList.toggle('hidden');
         }
         sliderItems.forEach(item => {
           item.addEventListener('mouseenter', stopSlider);
