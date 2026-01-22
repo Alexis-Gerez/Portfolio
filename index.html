@@ -6,7 +6,7 @@
     Strategy: Industrial Corporate Style with Functional UX
     - Palette: Deep Navy (#0D1B2A), Technical Blue (#0077B6), Slate Gray (#334E68)
     - Reordering: Management/Data tools prioritized
-    - Update: Full implementation of Mini-Sliders + Lightbox for all 3 main projects
+    - Update: Replaced Fleet Cost Tool with "Human and Operational Performance Insight Tool"
     -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -678,20 +678,41 @@
               rel="noopener noreferrer">Ver en GitHub</a>
           </div>
 
-          <!-- Fleet Tool 1 -->
+          <!-- Human & Operational Performance Insight Tool (REPLACED) -->
           <div class="trabajo-item proyecto-fleet">
             <div>
-              <h4>Fleet Cost Optimization Tool</h4>
-              <p>Herramienta para la gestión de vehículos mixtos (livianos/pesados). Analiza costos por kilómetro,
-                consumo de combustible y planifica mantenimientos preventivos para maximizar la disponibilidad de la
-                flota.</p>
+              <h4>Human and Operational Performance Insight Tool</h4>
+              
+              <!-- MINI SLIDER -->
+              <div class="project-mini-slider" id="human-perf-mini-slider">
+                <div class="project-mini-slider-track">
+                  <div class="project-mini-slide">
+                    <img src="https://github.com/Alexis-Gerez/Human-and-operational-performance-insight-tool/blob/main/screenshots/dashboard.png?raw=true" alt="Dashboard" title="Click para ampliar">
+                  </div>
+                  <div class="project-mini-slide">
+                    <img src="https://github.com/Alexis-Gerez/Human-and-operational-performance-insight-tool/blob/main/screenshots/CI_engine.png?raw=true" alt="CI Engine" title="Click para ampliar">
+                  </div>
+                  <div class="project-mini-slide">
+                    <img src="https://github.com/Alexis-Gerez/Human-and-operational-performance-insight-tool/blob/main/screenshots/workforce_analytics.png?raw=true" alt="Workforce Analytics" title="Click para ampliar">
+                  </div>
+                </div>
+                <button class="mini-slider-btn mini-slider-prev">&lt;</button>
+                <button class="mini-slider-btn mini-slider-next">&gt;</button>
+                <div class="mini-slider-indicators">
+                  <div class="mini-dot active"></div>
+                  <div class="mini-dot"></div>
+                  <div class="mini-dot"></div>
+                </div>
+              </div>
+
+              <p>Sistema de soporte a la decisión que integra analítica de RR.HH, métricas operativas y mejora continua. Ofrece una visión clara de eficiencia, brechas de habilidades y oportunidades de optimización mediante dashboards ejecutivos y recomendaciones automáticas (Kaizen, Lean).</p>
               <div class="trabajo-item-icons">
-                <i class="fab fa-python" title="Python"></i>
-                <i class="fas fa-truck" title="Fleet Ops"></i>
-                <i class="fas fa-chart-area" title="Cost Analysis"></i>
+                <i class="fas fa-users" title="Workforce Analytics"></i>
+                <i class="fas fa-chart-line" title="Performance Metrics"></i>
+                <i class="fas fa-lightbulb" title="Continuous Improvement"></i>
               </div>
             </div>
-            <a href="https://github.com/Alexis-Gerez/fleet-operations-cost-optimization-tool" class="btn"
+            <a href="https://github.com/Alexis-Gerez/Human-and-operational-performance-insight-tool" class="btn"
               target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
           </div>
 
@@ -1214,7 +1235,7 @@
           });
         }
 
-        // --- DYNAMIC MINI-SLIDER INITIALIZER (Handles all 3 projects) ---
+        // --- DYNAMIC MINI-SLIDER INITIALIZER (Handles all 4 projects now) ---
         function initMiniSlider(sliderId) {
           const container = document.getElementById(sliderId);
           if(!container) return;
@@ -1248,6 +1269,7 @@
         // Init all sliders
         initMiniSlider('kaizen-mini-slider');
         initMiniSlider('risk-mini-slider');
+        initMiniSlider('human-perf-mini-slider'); // NEW SLIDER ADDED
         initMiniSlider('fleet-mini-slider');
 
         // --- NEW: MODAL / LIGHTBOX LOGIC (Global for all sliders) ---
