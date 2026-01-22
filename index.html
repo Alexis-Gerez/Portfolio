@@ -6,7 +6,7 @@
     Strategy: Industrial Corporate Style with Functional UX
     - Palette: Deep Navy (#0D1B2A), Technical Blue (#0077B6), Slate Gray (#334E68)
     - Reordering: Management/Data tools prioritized
-    - Update: Added Mini-Slider for "Automotive Workshop Kaizen Dashboard" screenshots
+    - Update: Full implementation of Mini-Sliders + Lightbox for all 3 main projects
     -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,24 +41,17 @@
     body {
       font-family: 'Roboto', sans-serif;
       line-height: 1.7;
-      /* Increased for readability */
       color: var(--text-color);
       background-color: var(--secondary-color);
-      /* Slight grey background for the whole page */
     }
     /* --- Typography & Hierarchy --- */
-    h1,
-    h2,
-    h3,
-    h4 {
+    h1, h2, h3, h4 {
       color: var(--primary-color);
       margin-bottom: 0.8em;
       font-weight: 700;
       letter-spacing: -0.5px;
     }
-    h1 {
-      font-size: 2.5rem;
-    }
+    h1 { font-size: 2.5rem; }
     h2 {
       font-size: 2rem;
       border-bottom: 3px solid var(--accent-color);
@@ -66,17 +59,10 @@
       padding-bottom: 0.3rem;
       margin-bottom: 1.5rem;
     }
-    h3 {
-      font-size: 1.5rem;
-      color: var(--primary-light);
-    }
-    h4 {
-      font-size: 1.25rem;
-    }
-    p {
-      margin-bottom: 1rem;
-      color: var(--text-color);
-    }
+    h3 { font-size: 1.5rem; color: var(--primary-light); }
+    h4 { font-size: 1.25rem; }
+    p { margin-bottom: 1rem; color: var(--text-color); }
+    
     /* --- Header --- */
     header {
       background-image: linear-gradient(rgba(13, 27, 42, 0.85), rgba(13, 27, 42, 0.9)), url('https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
@@ -85,7 +71,6 @@
       color: #ffffff;
       text-align: center;
       padding: 6rem 2rem;
-      /* Increased padding */
       position: relative;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
@@ -101,6 +86,7 @@
       letter-spacing: 1px;
       text-transform: uppercase;
     }
+    
     /* --- Navigation --- */
     nav {
       background-color: var(--primary-color);
@@ -118,9 +104,7 @@
       max-width: 1200px;
       margin: 0 auto;
     }
-    nav ul li {
-      margin: 0;
-    }
+    nav ul li { margin: 0; }
     nav ul li a {
       display: block;
       color: #bdc3c7;
@@ -138,6 +122,7 @@
       color: #ffffff;
       border-bottom-color: var(--accent-color);
     }
+    
     /* --- Main Layout --- */
     main {
       max-width: 1200px;
@@ -149,15 +134,12 @@
       margin-bottom: 3rem;
       padding: 2.5rem;
       border-radius: 4px;
-      /* Sharper corners for industrial look */
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-      /* Subtle shadow */
       border-top: 4px solid transparent;
       transition: transform 0.3s ease;
     }
-    section:hover {
-      border-top-color: var(--accent-color);
-    }
+    section:hover { border-top-color: var(--accent-color); }
+    
     /* --- Components --- */
     .highlight {
       font-size: 1.3em;
@@ -167,6 +149,7 @@
       border-left: 4px solid var(--accent-color);
       padding-left: 1rem;
     }
+    
     /* Skills */
     .skills-container {
       display: grid;
@@ -189,23 +172,17 @@
       width: 30px;
       text-align: center;
     }
-    .skill-item p {
-      margin: 0;
-      font-weight: 500;
-      color: var(--primary-color);
-    }
+    .skill-item p { margin: 0; font-weight: 500; color: var(--primary-color); }
+    
     /* Projects Grid */
-    .trabajos-container,
-    .estudios-container {
+    .trabajos-container, .estudios-container {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      /* Improved grid responsiveness */
       gap: 2rem;
       margin-top: 1.5rem;
       margin-bottom: 3rem;
     }
-    .trabajo-item,
-    .estudio-item {
+    .trabajo-item, .estudio-item {
       background-color: var(--background-color);
       border: 1px solid var(--border-color);
       border-radius: 4px;
@@ -215,18 +192,13 @@
       flex-direction: column;
       justify-content: space-between;
       border-left: 4px solid var(--accent-color);
-      /* Tech accent */
       height: 100%;
     }
-    .trabajo-item:hover,
-    .estudio-item:hover {
+    .trabajo-item:hover, .estudio-item:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
-    .trabajo-item h4 {
-      min-height: 2.5em;
-      /* Alignment */
-    }
+    .trabajo-item h4 { min-height: 2.5em; }
     .trabajo-item-icons {
       margin: 1.5rem 0;
       display: flex;
@@ -234,16 +206,13 @@
       color: var(--text-light);
       font-size: 1.2rem;
     }
-    .trabajo-item .btn,
-    .slider-item a,
-    .contact-button {
+    .trabajo-item .btn, .slider-item a, .contact-button {
       display: inline-block;
       padding: 0.6rem 1.2rem;
       background-color: var(--accent-color);
       color: white;
       text-decoration: none;
       border-radius: 3px;
-      /* Industrial styling */
       font-weight: 500;
       font-size: 0.9rem;
       text-align: center;
@@ -252,24 +221,17 @@
       cursor: pointer;
       align-self: flex-start;
     }
-    .trabajo-item .btn {
-      margin-top: auto;
-      /* Push to bottom */
-      width: 100%;
-      /* Full width button on card */
-    }
-    .trabajo-item .btn:hover,
-    .slider-item a:hover,
-    .contact-button:hover {
+    .trabajo-item .btn { margin-top: auto; width: 100%; }
+    .trabajo-item .btn:hover, .slider-item a:hover, .contact-button:hover {
       background-color: var(--primary-color);
     }
-    /* Project Category Headers */
     .proyecto-categoria h3 {
       background: var(--secondary-color);
       padding: 1rem;
       border-left: 5px solid var(--primary-color);
       margin-top: 1rem;
     }
+    
     /* Footer */
     footer {
       background-color: var(--primary-color);
@@ -279,6 +241,7 @@
       margin-top: 4rem;
       font-size: 0.9rem;
     }
+    
     /* Buttons */
     .contact-buttons {
       display: flex;
@@ -286,15 +249,10 @@
       gap: 1rem;
       margin-top: 2rem;
     }
-    .contact-button i {
-      margin-right: 0.5rem;
-    }
+    .contact-button i { margin-right: 0.5rem; }
+    
     /* Hero Section */
-    #inicio {
-      display: flex;
-      align-items: center;
-      gap: 4rem;
-    }
+    #inicio { display: flex; align-items: center; gap: 4rem; }
     .inicio-image img {
       max-width: 280px;
       height: auto;
@@ -302,6 +260,7 @@
       border: 5px solid var(--secondary-color);
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     }
+    
     /* Slider (Certificates) */
     .slider-container {
       max-width: 600px;
@@ -311,50 +270,33 @@
       border-radius: 4px;
       position: relative;
       overflow: hidden;
-      /* Critical for slider to mask off-screen items */
     }
-    .slider {
-      display: flex;
-      transition: transform 0.5s ease;
-    }
-    .slider-item {
-      flex: 0 0 100%;
-      padding: 10px;
-      text-align: center;
-    }
+    .slider { display: flex; transition: transform 0.5s ease; }
+    .slider-item { flex: 0 0 100%; padding: 10px; text-align: center; }
     .slider-item img {
       border-radius: 4px;
       border: 1px solid var(--border-color);
       max-height: 250px;
-      /* Limit height significantly */
       width: auto;
       max-width: 100%;
       display: block;
       margin: 0 auto 1.5rem auto;
-      /* Center image */
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
-    .slider-item h3 {
-      font-size: 1.25rem;
-      margin-bottom: 0.5rem;
-      color: var(--primary-color);
-    }
-    .slider-item p {
-      font-size: 0.95rem;
-      margin-bottom: 1.5rem;
-    }
+    .slider-item h3 { font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--primary-color); }
+    .slider-item p { font-size: 0.95rem; margin-bottom: 1.5rem; }
 
-    /* --- NEW: PROJECT CARD MINI-SLIDER --- */
+    /* --- PROJECT CARD MINI-SLIDER (Standard Size + Lightbox) --- */
     .project-mini-slider {
       position: relative;
       width: 100%;
-      height: 200px;
-      /* Fixed height for consistent card layout */
+      height: 200px; /* Standard Size */
       margin-bottom: 1.5rem;
       border-radius: 4px;
       overflow: hidden;
       border: 1px solid var(--border-color);
       background-color: #000;
+      cursor: zoom-in; /* Indicates clickable */
     }
     
     .project-mini-slider-track {
@@ -363,17 +305,19 @@
       transition: transform 0.4s ease-in-out;
     }
     
-    .project-mini-slide {
-      min-width: 100%;
-      height: 100%;
-    }
+    .project-mini-slide { min-width: 100%; height: 100%; }
     
     .project-mini-slide img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      /* Ensures image fills area without distortion */
       display: block;
+      transition: transform 0.3s ease;
+    }
+
+    /* Subtle hover to encourage clicking */
+    .project-mini-slider:hover .project-mini-slide img {
+      transform: scale(1.03);
     }
     
     /* Controls for Mini Slider */
@@ -382,7 +326,6 @@
       top: 50%;
       transform: translateY(-50%);
       background-color: rgba(13, 27, 42, 0.7);
-      /* Semi-transparent navy */
       color: white;
       border: none;
       width: 32px;
@@ -397,14 +340,11 @@
       font-size: 0.9rem;
     }
     
-    .mini-slider-btn:hover {
-      background-color: var(--accent-color);
-    }
-    
+    .mini-slider-btn:hover { background-color: var(--accent-color); }
     .mini-slider-prev { left: 8px; }
     .mini-slider-next { right: 8px; }
     
-    /* Mini Indicators (Dots) */
+    /* Mini Indicators */
     .mini-slider-indicators {
       position: absolute;
       bottom: 8px;
@@ -422,8 +362,57 @@
       cursor: pointer;
     }
     
-    .mini-dot.active {
-      background-color: var(--accent-color);
+    .mini-dot.active { background-color: var(--accent-color); }
+
+    /* --- IMAGE MODAL / LIGHTBOX --- */
+    .image-modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.95); /* Dark overlay */
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .image-modal.active {
+      display: flex;
+      opacity: 1;
+    }
+    
+    .image-modal-content {
+      max-width: 90%;
+      max-height: 90vh;
+      border: 2px solid var(--accent-color);
+      border-radius: 4px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+      animation: zoomIn 0.3s;
+    }
+    
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+      z-index: 10000;
+    }
+    
+    .close-modal:hover,
+    .close-modal:focus { color: var(--accent-color); text-decoration: none; cursor: pointer; }
+    
+    @keyframes zoomIn {
+      from {transform:scale(0.8)} 
+      to {transform:scale(1)}
     }
 
     /* --- ACCORDION UX STYLES --- */
@@ -521,40 +510,17 @@
 
     /* Responsive */
     @media (max-width: 768px) {
-      header {
-        padding: 4rem 1rem;
-      }
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-      nav ul li {
-        margin: 0.2rem 0;
-        width: 100%;
-        text-align: center;
-      }
-      nav ul li a {
-        padding: 0.8rem;
-      }
-      #inicio {
-        flex-direction: column-reverse;
-        text-align: center;
-      }
-      .contact-buttons {
-        justify-content: center;
-      }
-      .skills-container {
-        grid-template-columns: 1fr;
-      }
-      .trabajos-container {
-        grid-template-columns: 1fr;
-      }
-      .slider-container {
-        padding: 1rem;
-      }
-      .category-header-img {
-        height: 140px;
-      }
+      header { padding: 4rem 1rem; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 0.2rem 0; width: 100%; text-align: center; }
+      nav ul li a { padding: 0.8rem; }
+      #inicio { flex-direction: column-reverse; text-align: center; }
+      .contact-buttons { justify-content: center; }
+      .skills-container { grid-template-columns: 1fr; }
+      .trabajos-container { grid-template-columns: 1fr; }
+      .slider-container { padding: 1rem; }
+      .category-header-img { height: 140px; }
+      .project-mini-slider { height: 200px; }
     }
   </style>
 </head>
@@ -629,25 +595,25 @@
         <h3>Soluciones de Gestión Operativa & Analytics</h3>
         <div class="trabajos-container">
           
-          <!-- Kaizen Dashboard - UPDATED WITH SLIDER -->
+          <!-- Kaizen Dashboard -->
           <div class="trabajo-item proyecto-kaizen">
             <div>
               <h4>Automotive Workshop Kaizen Dashboard</h4>
               
-              <!-- NEW: MINI SLIDER FOR VISUAL PREVIEW -->
+              <!-- MINI SLIDER -->
               <div class="project-mini-slider" id="kaizen-mini-slider">
                 <div class="project-mini-slider-track">
                   <div class="project-mini-slide">
-                    <img src="https://github.com/Alexis-Gerez/automotive-workshop-kaizen-dashboard/blob/main/docs/screenshots/dashboard_overview.png?raw=true" alt="Dashboard Overview">
+                    <img src="https://github.com/Alexis-Gerez/automotive-workshop-kaizen-dashboard/blob/main/docs/screenshots/dashboard_overview.png?raw=true" alt="Dashboard Overview" title="Click para ampliar">
                   </div>
                   <div class="project-mini-slide">
-                    <img src="https://github.com/Alexis-Gerez/automotive-workshop-kaizen-dashboard/blob/main/docs/screenshots/kaizen_board.png?raw=true" alt="Kaizen Board">
+                    <img src="https://github.com/Alexis-Gerez/automotive-workshop-kaizen-dashboard/blob/main/docs/screenshots/kaizen_board.png?raw=true" alt="Kaizen Board" title="Click para ampliar">
                   </div>
                   <div class="project-mini-slide">
-                    <img src="https://github.com/Alexis-Gerez/automotive-workshop-kaizen-dashboard/blob/main/docs/screenshots/quality_module.png?raw=true" alt="Quality Module">
+                    <img src="https://github.com/Alexis-Gerez/automotive-workshop-kaizen-dashboard/blob/main/docs/screenshots/quality_module.png?raw=true" alt="Quality Module" title="Click para ampliar">
                   </div>
                   <div class="project-mini-slide">
-                    <img src="https://github.com/Alexis-Gerez/automotive-workshop-kaizen-dashboard/blob/main/docs/screenshots/task_management.png?raw=true" alt="Task Management">
+                    <img src="https://github.com/Alexis-Gerez/automotive-workshop-kaizen-dashboard/blob/main/docs/screenshots/task_management.png?raw=true" alt="Task Management" title="Click para ampliar">
                   </div>
                 </div>
                 <button class="mini-slider-btn mini-slider-prev">&lt;</button>
@@ -676,6 +642,29 @@
           <div class="trabajo-item proyecto-risk">
             <div>
               <h4>Operational Risk & Safety Insight Tool</h4>
+              
+              <!-- MINI SLIDER -->
+              <div class="project-mini-slider" id="risk-mini-slider">
+                <div class="project-mini-slider-track">
+                  <div class="project-mini-slide">
+                    <img src="https://github.com/Alexis-Gerez/operational-risk-safety-insight-tool/blob/main/screenshots/dashboard.png?raw=true" alt="Dashboard" title="Click para ampliar">
+                  </div>
+                  <div class="project-mini-slide">
+                    <img src="https://github.com/Alexis-Gerez/operational-risk-safety-insight-tool/blob/main/screenshots/kaizen_actions.png?raw=true" alt="Kaizen Actions" title="Click para ampliar">
+                  </div>
+                  <div class="project-mini-slide">
+                    <img src="https://github.com/Alexis-Gerez/operational-risk-safety-insight-tool/blob/main/screenshots/risk_matrix.png?raw=true" alt="Risk Matrix" title="Click para ampliar">
+                  </div>
+                </div>
+                <button class="mini-slider-btn mini-slider-prev">&lt;</button>
+                <button class="mini-slider-btn mini-slider-next">&gt;</button>
+                <div class="mini-slider-indicators">
+                  <div class="mini-dot active"></div>
+                  <div class="mini-dot"></div>
+                  <div class="mini-dot"></div>
+                </div>
+              </div>
+
               <p>Sistema de observación y priorización de riesgos operativos. Permite categorizar incidentes según
                 matriz de impacto/probabilidad y vincularlos con acciones correctivas y necesidades de capacitación
                 técnica.</p>
@@ -688,6 +677,7 @@
             <a href="https://github.com/Alexis-Gerez/operational-risk-safety-insight-tool" class="btn" target="_blank"
               rel="noopener noreferrer">Ver en GitHub</a>
           </div>
+
           <!-- Fleet Tool 1 -->
           <div class="trabajo-item proyecto-fleet">
             <div>
@@ -704,10 +694,38 @@
             <a href="https://github.com/Alexis-Gerez/fleet-operations-cost-optimization-tool" class="btn"
               target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
           </div>
-          <!-- Fleet Tool 2 (Kept as per strict instructions not to remove content, though conceptually similar) -->
+
+          <!-- Fleet Analytics System -->
           <div class="trabajo-item proyecto-fleet">
             <div>
               <h4>Fleet Analytics System</h4>
+              
+              <!-- MINI SLIDER -->
+              <div class="project-mini-slider" id="fleet-mini-slider">
+                <div class="project-mini-slider-track">
+                  <div class="project-mini-slide">
+                    <img src="https://github.com/Alexis-Gerez/Fleet-Operations-Cost-Optimization-Tool/blob/main/screenshots/cost_analysis.png?raw=true" alt="Cost Analysis" title="Click para ampliar">
+                  </div>
+                  <div class="project-mini-slide">
+                    <img src="https://github.com/Alexis-Gerez/Fleet-Operations-Cost-Optimization-Tool/blob/main/screenshots/dashboard.png?raw=true" alt="Dashboard" title="Click para ampliar">
+                  </div>
+                  <div class="project-mini-slide">
+                    <img src="https://github.com/Alexis-Gerez/Fleet-Operations-Cost-Optimization-Tool/blob/main/screenshots/maintenance_planner.png?raw=true" alt="Maintenance Planner" title="Click para ampliar">
+                  </div>
+                  <div class="project-mini-slide">
+                    <img src="https://github.com/Alexis-Gerez/Fleet-Operations-Cost-Optimization-Tool/blob/main/screenshots/vehicle_register.png?raw=true" alt="Vehicle Register" title="Click para ampliar">
+                  </div>
+                </div>
+                <button class="mini-slider-btn mini-slider-prev">&lt;</button>
+                <button class="mini-slider-btn mini-slider-next">&gt;</button>
+                <div class="mini-slider-indicators">
+                  <div class="mini-dot active"></div>
+                  <div class="mini-dot"></div>
+                  <div class="mini-dot"></div>
+                  <div class="mini-dot"></div>
+                </div>
+              </div>
+
               <p>Sistema de apoyo a la toma de decisiones para flotas industriales. Estructura información técnica y
                 evalúa la eficiencia operativa sin depender de ERPs cerrados, facilitando auditorías y reportes ágiles.
               </p>
@@ -722,7 +740,7 @@
           </div>
         </div>
       </div>
-      <!-- PRIORITY 2: DEVELOPMENT & EDUCATION (New UX Structure) -->
+      <!-- PRIORITY 2: DEVELOPMENT & EDUCATION -->
       <h3 style="border-left: 5px solid var(--accent-color); padding-left: 1rem;">Desarrollo Tecnológico & Educación Técnica</h3>
       
       <div class="category-group">
@@ -800,9 +818,8 @@
           <div class="collapsible-wrapper">
             <div class="collapsible-content">
               <div class="trabajos-container">
-                <!-- Electrónica (UPDATED) -->
+                <!-- Electrónica -->
                 <div class="trabajo-item">
-                  <!-- Imagen previa adjunta -->
                   <img src="https://github.com/Alexis-Gerez/electronica-inicial-automotriz/blob/main/INFOGRAF%C3%8DAS/INFOGRAF%C3%8DA5.png?raw=true" alt="Sistema de Control Electrónico" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 1rem; background-color: #f0f0f0;">
                   
                   <h4>Electrónica Inicial Automotriz</h4>
@@ -812,7 +829,6 @@
                     <i class="fas fa-bolt"></i> Electricidad &nbsp; <i class="fas fa-car-battery"></i> Baterías
                   </div>
                   
-                  <!-- Botón al repositorio -->
                   <a href="https://github.com/Alexis-Gerez/electronica-inicial-automotriz" class="btn" target="_blank">Ver Repositorio</a>
                 </div>
                 <!-- Frenos -->
@@ -833,7 +849,6 @@
                     <i class="fas fa-ruler-combined"></i> Geometría &nbsp; <i class="fas fa-sync"></i> Dirección
                   </div>
 
-                   <!-- Botón al repositorio -->
                   <a href="https://github.com/Alexis-Gerez/alineacion-balanceo-automotriz" class="btn" target="_blank">Ver Repositorio</a>
                 </div>
                 <!-- Motores -->
@@ -849,7 +864,7 @@
           </div>
         </div>
 
-      </div> <!-- End Category Group -->
+      </div> 
     </section>
 
       </div>
@@ -979,7 +994,7 @@
             <li>Responsable de calidad técnica y estándares de marca.</li>
           </ul>
         </div>
-        <!-- Referencias - kept minimal -->
+        <!-- Referencias -->
         <div style="margin-top: 2rem; font-size: 0.9rem; color: var(--text-light);">
           <h3>Referencias Profesionales</h3>
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
@@ -1029,7 +1044,7 @@
               alt="Fundamentos de la Ciencia de Datos">
             <h3>Data Science Fundamentals</h3>
             <p>Conceptos clave para la toma de decisiones basada en datos.</p>
-            <a href="https://coursera.org/share/4b8a7e056274b3c4eb792dc8375eb167" target="_blank"
+            <a href="https://coursera.org/share/4b8a7e056274b3c4eb794dc8375eb167" target="_blank"
               rel="noopener noreferrer">Ver certificado</a>
           </div>
           <div class="slider-item">
@@ -1120,6 +1135,13 @@
     <footer>
       <p>© 2024 Alexis Fernando Gerez. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- IMAGE MODAL HTML (Hidden by default) -->
+    <div id="previewModal" class="image-modal">
+      <span class="close-modal" id="closeModalBtn">&times;</span>
+      <img class="image-modal-content" id="modalImg">
+    </div>
+
     <script>
       document.addEventListener('DOMContentLoaded', (event) => {
         // Smooth scrolling for navigation links
@@ -1192,45 +1214,69 @@
           });
         }
 
-        // --- NEW: KAIZEN PROJECT MINI-SLIDER LOGIC ---
-        const miniSliderContainer = document.getElementById('kaizen-mini-slider');
-        if(miniSliderContainer) {
-          const miniTrack = miniSliderContainer.querySelector('.project-mini-slider-track');
-          const miniSlides = miniSliderContainer.querySelectorAll('.project-mini-slide');
-          const miniPrev = miniSliderContainer.querySelector('.mini-slider-prev');
-          const miniNext = miniSliderContainer.querySelector('.mini-slider-next');
-          const miniDots = miniSliderContainer.querySelectorAll('.mini-dot');
+        // --- DYNAMIC MINI-SLIDER INITIALIZER (Handles all 3 projects) ---
+        function initMiniSlider(sliderId) {
+          const container = document.getElementById(sliderId);
+          if(!container) return;
+
+          const track = container.querySelector('.project-mini-slider-track');
+          const slides = container.querySelectorAll('.project-mini-slide');
+          const prev = container.querySelector('.mini-slider-prev');
+          const next = container.querySelector('.mini-slider-next');
+          const dots = container.querySelectorAll('.mini-dot');
           
-          let miniIndex = 0;
+          let index = 0;
 
-          function updateMiniSlider() {
-            // Move track
-            miniTrack.style.transform = `translateX(-${miniIndex * 100}%)`;
-            
-            // Update dots
-            miniDots.forEach((dot, idx) => {
-              if(idx === miniIndex) {
-                dot.classList.add('active');
-              } else {
-                dot.classList.remove('active');
-              }
+          function update() {
+            track.style.transform = `translateX(-${index * 100}%)`;
+            dots.forEach((dot, idx) => {
+               dot.classList.toggle('active', idx === index);
             });
           }
 
-          if(miniNext) {
-            miniNext.addEventListener('click', () => {
-              miniIndex = (miniIndex + 1) % miniSlides.length;
-              updateMiniSlider();
-            });
-          }
+          if(next) next.addEventListener('click', () => {
+            index = (index + 1) % slides.length;
+            update();
+          });
 
-          if(miniPrev) {
-            miniPrev.addEventListener('click', () => {
-              miniIndex = (miniIndex - 1 + miniSlides.length) % miniSlides.length;
-              updateMiniSlider();
-            });
-          }
+          if(prev) prev.addEventListener('click', () => {
+            index = (index - 1 + slides.length) % slides.length;
+            update();
+          });
         }
+
+        // Init all sliders
+        initMiniSlider('kaizen-mini-slider');
+        initMiniSlider('risk-mini-slider');
+        initMiniSlider('fleet-mini-slider');
+
+        // --- NEW: MODAL / LIGHTBOX LOGIC (Global for all sliders) ---
+        const modal = document.getElementById('previewModal');
+        const modalImg = document.getElementById('modalImg');
+        const closeModal = document.getElementById('closeModalBtn');
+
+        // Get all images inside ANY mini slider
+        const sliderImages = document.querySelectorAll('.project-mini-slide img');
+
+        sliderImages.forEach(img => {
+          img.addEventListener('click', function() {
+            modal.classList.add('active');
+            modalImg.src = this.src; // Set the modal image source to the clicked image
+          });
+        });
+
+        // Close the modal
+        closeModal.addEventListener('click', () => {
+          modal.classList.remove('active');
+        });
+
+        // Close if clicked outside the image
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.classList.remove('active');
+          }
+        });
+
       });
 
       // --- FIXED: Accordion Logic for Sections ---
