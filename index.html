@@ -6,7 +6,7 @@
     Strategy: Industrial Corporate Style with Functional UX
     - Palette: Deep Navy (#0D1B2A), Technical Blue (#0077B6), Slate Gray (#334E68)
     - Reordering: Management/Data tools prioritized
-    - Update: Added Card Image and Repo Link for "Electrónica Inicial"
+    - Update: Added Mini-Slider for "Automotive Workshop Kaizen Dashboard" screenshots
     -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -302,7 +302,7 @@
       border: 5px solid var(--secondary-color);
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     }
-    /* Slider */
+    /* Slider (Certificates) */
     .slider-container {
       max-width: 600px;
       margin: 0 auto;
@@ -344,7 +344,89 @@
       margin-bottom: 1.5rem;
     }
 
-    /* --- NEW: ACCORDION UX STYLES --- */
+    /* --- NEW: PROJECT CARD MINI-SLIDER --- */
+    .project-mini-slider {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      /* Fixed height for consistent card layout */
+      margin-bottom: 1.5rem;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      background-color: #000;
+    }
+    
+    .project-mini-slider-track {
+      display: flex;
+      height: 100%;
+      transition: transform 0.4s ease-in-out;
+    }
+    
+    .project-mini-slide {
+      min-width: 100%;
+      height: 100%;
+    }
+    
+    .project-mini-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* Ensures image fills area without distortion */
+      display: block;
+    }
+    
+    /* Controls for Mini Slider */
+    .mini-slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(13, 27, 42, 0.7);
+      /* Semi-transparent navy */
+      color: white;
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s;
+      font-size: 0.9rem;
+    }
+    
+    .mini-slider-btn:hover {
+      background-color: var(--accent-color);
+    }
+    
+    .mini-slider-prev { left: 8px; }
+    .mini-slider-next { right: 8px; }
+    
+    /* Mini Indicators (Dots) */
+    .mini-slider-indicators {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+    }
+    
+    .mini-dot {
+      width: 8px;
+      height: 8px;
+      background-color: rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    
+    .mini-dot.active {
+      background-color: var(--accent-color);
+    }
+
+    /* --- ACCORDION UX STYLES --- */
     .category-group {
       display: flex;
       flex-direction: column;
@@ -546,10 +628,38 @@
       <div class="proyecto-categoria">
         <h3>Soluciones de Gestión Operativa & Analytics</h3>
         <div class="trabajos-container">
-          <!-- Kaizen Dashboard -->
+          
+          <!-- Kaizen Dashboard - UPDATED WITH SLIDER -->
           <div class="trabajo-item proyecto-kaizen">
             <div>
               <h4>Automotive Workshop Kaizen Dashboard</h4>
+              
+              <!-- NEW: MINI SLIDER FOR VISUAL PREVIEW -->
+              <div class="project-mini-slider" id="kaizen-mini-slider">
+                <div class="project-mini-slider-track">
+                  <div class="project-mini-slide">
+                    <img src="https://github.com/Alexis-Gerez/automotive-workshop-kaizen-dashboard/blob/main/docs/screenshots/dashboard_overview.png?raw=true" alt="Dashboard Overview">
+                  </div>
+                  <div class="project-mini-slide">
+                    <img src="https://github.com/Alexis-Gerez/automotive-workshop-kaizen-dashboard/blob/main/docs/screenshots/kaizen_board.png?raw=true" alt="Kaizen Board">
+                  </div>
+                  <div class="project-mini-slide">
+                    <img src="https://github.com/Alexis-Gerez/automotive-workshop-kaizen-dashboard/blob/main/docs/screenshots/quality_module.png?raw=true" alt="Quality Module">
+                  </div>
+                  <div class="project-mini-slide">
+                    <img src="https://github.com/Alexis-Gerez/automotive-workshop-kaizen-dashboard/blob/main/docs/screenshots/task_management.png?raw=true" alt="Task Management">
+                  </div>
+                </div>
+                <button class="mini-slider-btn mini-slider-prev">&lt;</button>
+                <button class="mini-slider-btn mini-slider-next">&gt;</button>
+                <div class="mini-slider-indicators">
+                  <div class="mini-dot active"></div>
+                  <div class="mini-dot"></div>
+                  <div class="mini-dot"></div>
+                  <div class="mini-dot"></div>
+                </div>
+              </div>
+
               <p>Herramienta analítica de gestión para talleres automotrices centrada en la mejora continua. Visualiza
                 métricas clave (KPIs), controla retrabajos y detecta cuellos de botella mediante análisis de datos.</p>
               <div class="trabajo-item-icons">
@@ -561,6 +671,7 @@
             <a href="https://github.com/Alexis-Gerez/automotive-workshop-kaizen-dashboard" class="btn" target="_blank"
               rel="noopener noreferrer">Ver en GitHub</a>
           </div>
+
           <!-- Risk Tool -->
           <div class="trabajo-item proyecto-risk">
             <div>
@@ -638,7 +749,6 @@
           <div class="collapsible-wrapper">
             <div class="collapsible-content">
               <div class="trabajos-container">
-                </div>
                 <div class="trabajo-item">
                   <h4>Automatización de Control de Nivel</h4>
                   <p>Sistema de control de fluidos con sensores y actuadores, simulando procesos de planta.</p>
@@ -1035,7 +1145,8 @@
         skillItems.forEach((item, index) => {
           item.style.animationDelay = `${index * 0.05}s`;
         });
-        // Slider functionality
+        
+        // --- GLOBAL CERTIFICATES SLIDER FUNCTIONALITY (Unchanged) ---
         const slider = document.querySelector('.slider');
         const sliderItems = document.querySelectorAll('.slider-item');
         const prevButton = document.querySelector('.slider-arrow-left');
@@ -1079,6 +1190,46 @@
             gmailText.style.display =
               gmailText.style.display === "none" ? "inline-block" : "none";
           });
+        }
+
+        // --- NEW: KAIZEN PROJECT MINI-SLIDER LOGIC ---
+        const miniSliderContainer = document.getElementById('kaizen-mini-slider');
+        if(miniSliderContainer) {
+          const miniTrack = miniSliderContainer.querySelector('.project-mini-slider-track');
+          const miniSlides = miniSliderContainer.querySelectorAll('.project-mini-slide');
+          const miniPrev = miniSliderContainer.querySelector('.mini-slider-prev');
+          const miniNext = miniSliderContainer.querySelector('.mini-slider-next');
+          const miniDots = miniSliderContainer.querySelectorAll('.mini-dot');
+          
+          let miniIndex = 0;
+
+          function updateMiniSlider() {
+            // Move track
+            miniTrack.style.transform = `translateX(-${miniIndex * 100}%)`;
+            
+            // Update dots
+            miniDots.forEach((dot, idx) => {
+              if(idx === miniIndex) {
+                dot.classList.add('active');
+              } else {
+                dot.classList.remove('active');
+              }
+            });
+          }
+
+          if(miniNext) {
+            miniNext.addEventListener('click', () => {
+              miniIndex = (miniIndex + 1) % miniSlides.length;
+              updateMiniSlider();
+            });
+          }
+
+          if(miniPrev) {
+            miniPrev.addEventListener('click', () => {
+              miniIndex = (miniIndex - 1 + miniSlides.length) % miniSlides.length;
+              updateMiniSlider();
+            });
+          }
         }
       });
 
