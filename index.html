@@ -1388,24 +1388,23 @@
 
       // --- FIXED: Accordion Logic for Sections ---
       function toggleSection(cardId) {
-        const card = document.getElementById(cardId);
-        const wrapper = card.querySelector('.collapsible-wrapper');
-        const btnText = card.querySelector('.btn-toggle span');
-        
-        // Toggle active class on card (rotates arrow, changes color)
-        card.classList.toggle('active');
+  const card = document.getElementById(cardId);
 
-        // Animate Height
-        if (card.classList.contains('active')) {
-          // Open
-          btnText.textContent = btnText.textContent.replace('Ver', 'Ocultar');
-          wrapper.style.maxHeight = wrapper.scrollHeight + "px";
-        } else {
-          // Close
-          btnText.textContent = btnText.textContent.replace('Ocultar', 'Ver');
-          wrapper.style.maxHeight = "0";
-        }
-      }
+  // SOLO el wrapper hijo directo de esta card
+  const wrapper = card.querySelector(':scope > .collapsible-wrapper');
+  const btnText = card.querySelector('.btn-toggle span');
+
+  const isOpen = card.classList.toggle('active');
+
+  if (isOpen) {
+    btnText.textContent = btnText.textContent.replace('Ver', 'Ocultar');
+    wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+  } else {
+    btnText.textContent = btnText.textContent.replace('Ocultar', 'Ver');
+    wrapper.style.maxHeight = "0";
+  }
+}
+
     </script>
 </body>
 </html>
