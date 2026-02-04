@@ -831,31 +831,112 @@ Herramientas analíticas diseñadas para optimizar procesos técnicos y operativ
           </div>   <!-- FIN collapsible-wrapper -->
           </div>     <!-- 🔥 CIERRE REAL DE cat-analytics -->
 
-      <!-- PRIORITY 2: LEARNING STRATEGY -->
+<!-- PRIORITY 2: LEARNING STRATEGY -->
 
-<h3 style="border-left: 5px solid var(--accent-color); padding-left: 1rem;">
-Learning Strategy & Technical Training Design
-</h3>
+<div class="main-category-card" id="cat-learning">
 
-<div class="category-group">
-  <div class="main-category-card">
-    <div class="category-header">
-      <img src="https://alexis-gerez.github.io/proyectos-arduino-autotech/img/p7-diagrama-agua.jpg?raw=true" alt="Learning Strategy" class="category-header-img">
-      <div class="category-content">
-        <h4>Caso integrador: Simulación de un proceso industrial para el diseño de aprendizaje técnico</h4>
-        <p style="color: var(--text-light); font-size: 0.95rem;">
-          Este caso muestra cómo un proceso físico simulado con Arduino permite diseñar experiencias de aprendizaje basadas en diagnóstico real, transferencia de competencias y aplicación en entornos industriales y automotrices.
-        </p>
-        <div class="category-actions">
-          <a href="learning-strategy.html" class="btn-toggle">
-            Ver caso completo
-          </a>
-        </div>
+  <div class="category-header">
+    <img src="https://alexis-gerez.github.io/proyectos-arduino-autotech/img/p7-diagrama-agua.jpg?raw=true" alt="Learning Strategy" class="category-header-img">
+    
+    <div class="category-content">
+      <h3 style="border-left: 5px solid var(--accent-color); padding-left: 1rem;">
+        Learning Strategy & Technical Training Design
+      </h3>
+
+      <p style="color: var(--text-light); font-size: 0.95rem; margin: 0.8rem 0 1.2rem 0;">
+        Caso integrador que muestra cómo un proceso físico simulado permite diseñar experiencias de aprendizaje basadas en diagnóstico real, transferencia de competencias y aplicación en entornos industriales y automotrices.
+      </p>
+
+      <div class="category-actions">
+        <button class="btn-toggle" onclick="toggleSection('cat-learning')">
+          <span>Ver caso</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
       </div>
     </div>
   </div>
+
+  <!-- CONTENIDO DESPLEGABLE -->
+  <div class="collapsible-wrapper">
+    <div class="collapsible-content">
+      <div class="trabajos-container">
+
+        <!-- CASO DE ESTUDIO --><div class="trabajo-item">
+  <div>
+    <h4>Caso integrador: cómo simular un proceso industrial para enseñar a diagnosticar sistemas reales</h4>
+
+    <p>
+    En la industria y en el diagnóstico automotriz, los sistemas no fallan en teoría. 
+    Fallan en la práctica: sensores que envían señales inconsistentes, actuadores que no responden 
+    y personas que deben interpretar qué está ocurriendo a partir del comportamiento del sistema.
+    </p>
+
+    <p>
+    Durante años observé que la formación técnica tradicional enseña primero la teoría y después el problema. 
+    En el mundo real ocurre exactamente al revés: primero aparece la falla, luego entendemos el sistema.
+    </p>
+
+    <p>
+    El proyecto <strong>Control de Nivel de Agua</strong> fue diseñado con esa lógica. 
+    No como un ejercicio de Arduino, sino como un entorno de simulación donde intervienen sensores, 
+    lógica de control y actuadores que obligan a observar, medir, interpretar señales y tomar decisiones.
+    </p>
+
+    <p>
+    El alumno no recibe instrucciones teóricas iniciales. Se enfrenta a un sistema en funcionamiento que debe 
+    diagnosticar a partir de su comportamiento. Exactamente igual que en un taller o en una planta industrial.
+    </p>
+
+    <h5 style="margin-top:1rem;">Competencias que se desarrollan en este entorno</h5>
+    <ul>
+      <li>Interpretación de señales provenientes de sensores físicos</li>
+      <li>Comprensión de la lógica de control de un sistema</li>
+      <li>Diagnóstico de fallas sin guías teóricas previas</li>
+      <li>Toma de decisiones basada en la observación y los datos</li>
+      <li>Pensamiento sistémico aplicado a entornos técnicos reales</li>
+    </ul>
+
+    <p>
+    Este mismo razonamiento es el que se aplica luego al diagnóstico de sensores automotrices 
+    como nivel de combustible, temperatura, presión o sistemas electrónicos complejos.
+    </p>
+
+    <p>
+    La diferencia es que el aprendizaje ocurre en un entorno controlado que replica la lógica 
+    de la operación real, permitiendo equivocarse, analizar y comprender sin riesgo operativo.
+    </p>
+
+    <h5 style="margin-top:1rem;">Aplicación en organizaciones</h5>
+    <ul>
+      <li>Capacitación técnica basada en escenarios realistas</li>
+      <li>Reducción de la curva de aprendizaje en adopción tecnológica</li>
+      <li>Detección de brechas de habilidades observando el desempeño</li>
+      <li>Formación basada en resolución de problemas y no en memorización de contenido</li>
+    </ul>
+
+    <p style="margin-top:1rem;">
+    Diseñar aprendizaje técnico no consiste en enseñar contenido, sino en diseñar experiencias 
+    que obliguen a pensar, diagnosticar y resolver como en la realidad.
+    </p>
+
+    <div class="trabajo-item-icons">
+      <i class="fas fa-brain" title="Learning Strategy"></i>
+      <i class="fas fa-cogs" title="Technical Systems"></i>
+      <i class="fas fa-industry" title="Industrial Simulation"></i>
+    </div>
+  </div>
+
+  <a href="https://alexis-gerez.github.io/proyectos-arduino-autotech/proyectos/intermedios/control-nivel-agua/" class="btn" target="_blank">
+    Ver proyecto técnico
+  </a>
 </div>
 
+
+      </div>
+    </div>
+  </div>
+
+</div>
 
 <!-- PRIORITY 3: DEVELOPMENT & EDUCATION -->
 
@@ -886,17 +967,19 @@ Learning Strategy & Technical Training Design
             <div class="collapsible-content">
               <div class="trabajos-container">
                 <div class="trabajo-item">
-                  <img src="https://alexis-gerez.github.io/proyectos-arduino-autotech/img/p7-control-agua.png?raw=true" alt="Control-nivel-agua " style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 1rem; background-color: #f0f0f0;">
-                  <h4>Automatización de Control de Nivel</h4>
-                  <p>Sistema de control de fluidos con sensores y actuadores, simulando procesos de planta.</p>
+                  <img src="https://alexis-gerez.github.io/proyectos-arduino-autotech/img/p14av-carritodetector.png?raw=true" alt="Carrito-detector " style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 1rem; background-color: #f0f0f0;">
+                 <h4>Carrito Detector de Obstáculos</h4>
+                  <p>
+                    Plataforma móvil con sensores de proximidad y lógica de control que simula la percepción del entorno,
+                     toma de decisiones en tiempo real y respuesta automática ante obstáculos, replicando principios de sensórica y diagnóstico aplicados a sistemas físicos reales.
+                  </p>
                   <div style="margin-bottom: 1rem; color: var(--accent-color);">
                     <i class="fas fa-water"></i> Fluidos &nbsp; <i class="fas fa-tools"></i> Automation
                   </div>
-                  <a href="https://alexis-gerez.github.io/proyectos-arduino-autotech/proyectos/intermedios/control-nivel-agua/" class="btn" target="_blank">Ver Proyecto</a>
+                  <a href="https://alexis-gerez.github.io/proyectos-arduino-autotech/proyectos/avanzados/carrito-detector/" class="btn" target="_blank">Ver Proyecto</a>
                 </div>
                 <div class="trabajo-item">
                 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFpwVC43U_A1Zjxc0KA8TkZ12IRoKr7WEVbiUaNSyW8WAh7NvsWpiK0AiOyOPbjPRXn2kZ0l1N-YZtCbbsgNXJk5wQYzV2-bHM5HWpIwNVMdjK8S9jBdPAM96EJeREm-UFmp0ggi7J9xGxYT3VDezWPjc5AwrnycSWvSZxOyZMjlmS-NHZlrhnuVYwRGdv/s1600/p5.png?raw=true" alt="Alarma-proximidad" style="width: 100%; height: 160px; object-fit: cover; border-radius: 4px; margin-bottom: 1rem; background-color: #f0f0f0;">
-
                 <h4>Alarma de proximidad</h4>
                   <p> Recurso para aprender cómo funcionan los sistemas de seguridad modernos.</p>
                   <div style="margin-bottom: 1rem; color: var(--accent-color);">
@@ -1008,7 +1091,7 @@ Learning Strategy & Technical Training Design
       </div>
     </section>
     <section id="skills">
-      <h2>Competencias Técnicas</h2>
+      <h2>Skills</h2>
       <div class="skills-container">
         <div class="skills-column">
           <h3>Habilidades Hard</h3>
@@ -1059,7 +1142,7 @@ Learning Strategy & Technical Training Design
       </div>
     </section>
     <section id="estudios">
-      <h2>Formación Académica</h2>
+      <h2>Estudios</h2>
       <div class="estudios-container">
         <div class="estudio-item">
           <div>
