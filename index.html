@@ -522,7 +522,42 @@
       .category-header-img { height: 140px; }
       .project-mini-slider { height: 200px; }
     }
-  </style>
+    /* CASO DE ESTUDIO LAYOUT */
+
+.case-study {
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.case-study h4 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.case-study h5 {
+  font-size: 1.2rem;
+  margin-top: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: var(--accent-color);
+}
+
+.case-study p {
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.case-study ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.case-study .trabajo-item-icons {
+  margin-top: 1.5rem;
+}
+
+</style>
 </head>
 <body>
   <header>
@@ -861,10 +896,13 @@ Herramientas analíticas diseñadas para optimizar procesos técnicos y operativ
     <div class="collapsible-content">
       <div class="trabajos-container">
 
-        <!-- CASO DE ESTUDIO --><div class="trabajo-item">
+       <!-- CASO DE ESTUDIO -->
+<div class="trabajo-item case-study">
   <div>
+
     <h4>Caso integrador: cómo simular un proceso industrial para enseñar a diagnosticar sistemas reales</h4>
 
+    <h5>El problema real</h5>
     <p>
     En la industria y en el diagnóstico automotriz, los sistemas no fallan en teoría. 
     Fallan en la práctica: sensores que envían señales inconsistentes, actuadores que no responden 
@@ -876,6 +914,7 @@ Herramientas analíticas diseñadas para optimizar procesos técnicos y operativ
     En el mundo real ocurre exactamente al revés: primero aparece la falla, luego entendemos el sistema.
     </p>
 
+    <h5>El entorno simulado</h5>
     <p>
     El proyecto <strong>Control de Nivel de Agua</strong> fue diseñado con esa lógica. 
     No como un ejercicio de Arduino, sino como un entorno de simulación donde intervienen sensores, 
@@ -887,7 +926,7 @@ Herramientas analíticas diseñadas para optimizar procesos técnicos y operativ
     diagnosticar a partir de su comportamiento. Exactamente igual que en un taller o en una planta industrial.
     </p>
 
-    <h5 style="margin-top:1rem;">Competencias que se desarrollan en este entorno</h5>
+    <h5>Competencias que se desarrollan en este entorno</h5>
     <ul>
       <li>Interpretación de señales provenientes de sensores físicos</li>
       <li>Comprensión de la lógica de control de un sistema</li>
@@ -896,6 +935,7 @@ Herramientas analíticas diseñadas para optimizar procesos técnicos y operativ
       <li>Pensamiento sistémico aplicado a entornos técnicos reales</li>
     </ul>
 
+    <h5>Transferencia al mundo real</h5>
     <p>
     Este mismo razonamiento es el que se aplica luego al diagnóstico de sensores automotrices 
     como nivel de combustible, temperatura, presión o sistemas electrónicos complejos.
@@ -906,7 +946,7 @@ Herramientas analíticas diseñadas para optimizar procesos técnicos y operativ
     de la operación real, permitiendo equivocarse, analizar y comprender sin riesgo operativo.
     </p>
 
-    <h5 style="margin-top:1rem;">Aplicación en organizaciones</h5>
+    <h5>Aplicación en organizaciones</h5>
     <ul>
       <li>Capacitación técnica basada en escenarios realistas</li>
       <li>Reducción de la curva de aprendizaje en adopción tecnológica</li>
@@ -914,7 +954,8 @@ Herramientas analíticas diseñadas para optimizar procesos técnicos y operativ
       <li>Formación basada en resolución de problemas y no en memorización de contenido</li>
     </ul>
 
-    <p style="margin-top:1rem;">
+    <h5>Conclusión</h5>
+    <p>
     Diseñar aprendizaje técnico no consiste en enseñar contenido, sino en diseñar experiencias 
     que obliguen a pensar, diagnosticar y resolver como en la realidad.
     </p>
@@ -930,12 +971,9 @@ Herramientas analíticas diseñadas para optimizar procesos técnicos y operativ
     Ver proyecto técnico
   </a>
 </div>
-
-
-      </div>
+  </div>
     </div>
   </div>
-
 </div>
 
 <!-- PRIORITY 3: DEVELOPMENT & EDUCATION -->
