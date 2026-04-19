@@ -862,8 +862,6 @@ Herramientas analíticas diseñadas para optimizar procesos técnicos y operativ
 
 <!-- PRIORITY 2: LEARNING STRATEGY -->
 
-<!-- PRIORITY 2: LEARNING STRATEGY -->
-
 <div class="main-category-card" id="cat-learning">
 
   <div class="category-header">
@@ -893,93 +891,121 @@ Herramientas analíticas diseñadas para optimizar procesos técnicos y operativ
     <div class="collapsible-content">
       <div class="trabajos-container">
 
-       <!-- CASO DE ESTUDIO -->
+<!-- CASO DE ESTUDIO -->
 <div class="trabajo-item case-study">
   <div>
 
-    <h4>Caso integrador: cómo simular un proceso industrial para enseñar a diagnosticar sistemas reales</h4>
+    <h4>Caso integrador: diseño de un sistema de control automotriz aplicado a formación técnica</h4>
 
     <h5>El problema real</h5>
     <p>
-    En la industria y en el diagnóstico automotriz, los sistemas no fallan en teoría. 
-    Fallan en la práctica: sensores que envían señales inconsistentes, actuadores que no responden 
-    y personas que deben interpretar qué está ocurriendo a partir del comportamiento del sistema.
+    En el diagnóstico automotriz, los sistemas no fallan en teoría. Fallan en la práctica: sensores que envían señales incorrectas,
+    actuadores que no responden y técnicos que deben interpretar el comportamiento del sistema para tomar decisiones.
     </p>
 
     <p>
-    Durante años observé que la formación técnica tradicional enseña primero la teoría y después el problema. 
-    En el mundo real ocurre exactamente al revés: primero aparece la falla, luego entendemos el sistema.
+    La formación técnica tradicional suele enseñar primero la teoría y luego su aplicación. Sin embargo, en el entorno real ocurre lo contrario:
+    primero aparece la falla y luego se comprende el sistema.
     </p>
 
-    <!-- NUEVA SECCIÓN CLAVE -->
-    <h5>De la simulación a un sistema de formación completo</h5>
+    <h5>El sistema integrador: refrigeración automotriz</h5>
     <p>
-    Este enfoque no quedó limitado a un caso aislado, sino que fue implementado en el desarrollo del curso:
-    <strong>Tecnología de Control Automotriz</strong>.
+    Para trasladar esta lógica al aprendizaje, se diseñó un sistema basado en el funcionamiento del sistema de refrigeración de un automóvil,
+    donde intervienen sensores, controlador y actuadores.
     </p>
 
-    <p>
-    Un programa estructurado en 25 clases donde los estudiantes progresan desde fundamentos eléctricos 
-    hasta la construcción de sistemas automotrices inteligentes, integrando sensores, lógica de control 
-    y actuadores en proyectos reales.
-    </p>
-
-    <p>
-    El curso replica la lógica del entorno real:
-    observación → interpretación → decisión → acción.
-    </p>
-
-    <h5>El entorno simulado</h5>
-    <p>
-    El proyecto <strong>Control de Nivel de Agua</strong> fue diseñado con esa lógica. 
-    No como un ejercicio de Arduino, sino como un entorno de simulación donde intervienen sensores, 
-    lógica de control y actuadores que obligan a observar, medir, interpretar señales y tomar decisiones.
-    </p>
-
-    <p>
-    El alumno no recibe instrucciones teóricas iniciales. Se enfrenta a un sistema en funcionamiento que debe 
-    diagnosticar a partir de su comportamiento. Exactamente igual que en un taller o en una planta industrial.
-    </p>
-
-    <h5>Competencias que se desarrollan en este entorno</h5>
     <ul>
-      <li>Interpretación de señales provenientes de sensores físicos</li>
-      <li>Comprensión de la lógica de control de un sistema</li>
-      <li>Diagnóstico de fallas sin guías teóricas previas</li>
-      <li>Toma de decisiones basada en la observación y los datos</li>
-      <li>Pensamiento sistémico aplicado a entornos técnicos reales</li>
+      <li>Sensor de temperatura (entrada del sistema)</li>
+      <li>Controlador (Arduino / lógica de decisión)</li>
+      <li>Actuador (electroventilador mediante relé)</li>
+      <li>Visualización de datos (pantalla o monitoreo)</li>
     </ul>
 
-    <h5>Transferencia al mundo real</h5>
     <p>
-    Este mismo enfoque se aplica posteriormente en el diagnóstico de sistemas automotrices reales, 
-    permitiendo transferir el aprendizaje desde entornos simulados a situaciones de campo.
+    Este sistema permite replicar una situación real: el motor aumenta su temperatura y el sistema debe responder automáticamente,
+    activando el ventilador según condiciones definidas.
     </p>
 
-    <h5>Aplicación en organizaciones</h5>
+    <h5>Modelo de funcionamiento</h5>
+    <p>
+    sensor → procesamiento → decisión → actuación
+    </p>
+
+    <p>
+    El estudiante no memoriza conceptos: interpreta señales, analiza el comportamiento del sistema y comprende la lógica de control.
+    </p>
+
+    <h5>De sistema técnico a sistema de formación</h5>
+    <p>
+    A partir de este modelo, se estructuró el curso <strong>Tecnología de Control Automotriz</strong>, organizado en bloques progresivos:
+    </p>
+
     <ul>
-      <li>Capacitación técnica basada en escenarios realistas</li>
-      <li>Reducción de la curva de aprendizaje</li>
-      <li>Detección de brechas de habilidades</li>
-      <li>Formación orientada a resolución de problemas</li>
+      <li>Fundamentos eléctricos (medición, ley de Ohm, circuitos)</li>
+      <li>Componentes electrónicos (diodos, relés, transistores)</li>
+      <li>Control electrónico (Arduino, lógica, sensores)</li>
+      <li>Sistemas integrados (aplicaciones automotrices reales)</li>
     </ul>
+
+    <p>
+    Cada bloque combina:
+    </p>
+
+    <ul>
+      <li>Explicación conceptual</li>
+      <li>Simulación (Tinkercad)</li>
+      <li>Práctica en hardware real</li>
+      <li>Ejercicios escalonados (nivel 1 a 3)</li>
+      <li>Aplicación en sistemas automotrices</li>
+    </ul>
+
+    <h5>Metodología aplicada</h5>
+    <p>
+    El aprendizaje se basa en resolución de problemas, donde el estudiante:
+    </p>
+
+    <ul>
+      <li>Observa el sistema</li>
+      <li>Interpreta señales</li>
+      <li>Identifica fallas</li>
+      <li>Toma decisiones técnicas</li>
+    </ul>
+
+    <h5>Competencias desarrolladas</h5>
+    <ul>
+      <li>Diagnóstico de sistemas electrónicos</li>
+      <li>Comprensión de lógica de control</li>
+      <li>Integración sensor–actuador</li>
+      <li>Pensamiento sistémico</li>
+      <li>Aplicación en entornos reales</li>
+    </ul>
+
+    <h5>Transferencia a la industria</h5>
+    <p>
+    Este enfoque replica la lógica utilizada en sistemas reales de la industria automotriz e industrial:
+    control de temperatura, presión, flujo y variables críticas mediante sensores y actuadores.
+    </p>
+
+    <p>
+    Permite reducir la brecha entre formación y práctica, facilitando la adaptación del estudiante a entornos técnicos reales.
+    </p>
 
     <h5>Impacto</h5>
     <p>
-    Este enfoque permite alinear la formación técnica con las necesidades reales del entorno productivo, 
-    mejorando la capacidad de diagnóstico, la toma de decisiones y la eficiencia operativa.
+    El resultado es un sistema de formación alineado con la realidad del campo técnico, donde el aprendizaje ocurre a través de la experiencia,
+    el análisis y la toma de decisiones, y no mediante la memorización de contenido.
     </p>
 
     <div class="trabajo-item-icons">
-      <i class="fas fa-brain" title="Learning Strategy"></i>
-      <i class="fas fa-cogs" title="Technical Systems"></i>
-      <i class="fas fa-industry" title="Industrial Simulation"></i>
-      <i class="fas fa-graduation-cap" title="Training System"></i>
+      <i class="fas fa-car" title="Automotive Systems"></i>
+      <i class="fas fa-microchip" title="Control Systems"></i>
+      <i class="fas fa-cogs" title="Integration"></i>
+      <i class="fas fa-graduation-cap" title="Technical Training"></i>
     </div>
   </div>
 
-  <a href="https://alexis-gerez.github.io/proyectos-arduino-autotech/proyectos/intermedios/control-nivel-agua/" class="btn" target="_blank">
-    Ver proyecto técnico
+  <a href="#" class="btn">
+    Ver sistema aplicado al curso
   </a>
 </div>
 
