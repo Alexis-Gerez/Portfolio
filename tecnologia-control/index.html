@@ -1,146 +1,218 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Tecnología de Control Automotriz</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Tecnología de Control Automotriz</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #0f172a;
-      color: #e2e8f0;
-    }
+<style>
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
-    }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #0f172a;
+  color: #e2e8f0;
+}
 
-    h1, h2 {
-      color: #38bdf8;
-    }
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
 
-    .hero {
-      text-align: center;
-      padding: 3rem 1rem;
-    }
+h1, h2 {
+  color: #38bdf8;
+}
 
-    .section {
-      margin: 2rem 0;
-    }
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+}
 
-    .card {
-      background: #1e293b;
-      padding: 1.5rem;
-      border-radius: 10px;
-      margin-bottom: 1rem;
-    }
+.hero h1 {
+  font-size: 2.2rem;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 10px 20px;
-      background: #38bdf8;
-      color: #000;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
+.section {
+  margin: 2.5rem 0;
+}
 
-    ul {
-      padding-left: 1.2rem;
-    }
+.card {
+  background: #1e293b;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border-left: 4px solid #38bdf8;
+}
 
-  </style>
+.btn {
+  display: inline-block;
+  margin: 0.4rem;
+  padding: 10px 18px;
+  background: #38bdf8;
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #0ea5e9;
+}
+
+.block-title {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #7dd3fc;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+.highlight {
+  color: #7dd3fc;
+}
+
+</style>
 </head>
 
 <body>
 
 <div class="container">
 
-  <!-- HERO -->
-  <div class="hero">
-    <h1>Tecnología de Control Automotriz</h1>
-    <p>
-      Curso completo de formación técnica en electrónica, control y sistemas inteligentes aplicados al automóvil.
-    </p>
+<!-- HERO -->
+<div class="hero">
+  <h1>Tecnología de Control Automotriz</h1>
+  <p>
+    Curso técnico formativo orientado al desarrollo de competencias en electrónica,
+    control y diagnóstico de sistemas automotrices.
+  </p>
+</div>
+
+<!-- DESTINATARIOS -->
+<div class="section">
+  <h2>¿A quién está dirigido?</h2>
+  <p>
+    Este curso está pensado para estudiantes iniciales de la formación técnico automotriz,
+    que necesitan construir una base sólida en electricidad, electrónica y control,
+    con una transición progresiva hacia sistemas inteligentes aplicados al automóvil.
+  </p>
+</div>
+
+<!-- PROPUESTA -->
+<div class="section">
+  <h2>Enfoque de formación</h2>
+  <p>
+    La propuesta se basa en un enfoque progresivo donde el estudiante no solo adquiere conocimientos,
+    sino que desarrolla la capacidad de interpretar sistemas reales, diagnosticar fallas y comprender
+    el funcionamiento integral de un sistema técnico.
+  </p>
+
+  <p class="highlight">
+    Se trabaja desde lo básico hacia lo aplicado, integrando teoría, práctica y resolución de problemas.
+  </p>
+</div>
+
+<!-- ESTRUCTURA -->
+<div class="section">
+  <h2>Estructura del curso</h2>
+
+  <div class="card">
+    <strong>Bloque 1:</strong> Fundamentos eléctricos  
+    <p>Medición, magnitudes eléctricas, ley de Ohm y armado de circuitos.</p>
   </div>
 
-  <!-- QUE ES -->
-  <div class="section">
-    <h2>¿Qué es este curso?</h2>
-    <p>
-      Este curso simula la formación real de un técnico automotriz moderno, integrando electricidad, electrónica y control mediante proyectos aplicados.
-    </p>
+  <div class="card">
+    <strong>Bloque 2:</strong> Electrónica básica aplicada  
+    <p>Componentes electrónicos y su aplicación en sistemas automotrices.</p>
   </div>
 
-  <!-- ESTRUCTURA -->
-  <div class="section">
-    <h2>Estructura del curso</h2>
-
-    <div class="card">
-      <strong>Bloque 1:</strong> Fundamentos eléctricos
-    </div>
-
-    <div class="card">
-      <strong>Bloque 2:</strong> Electrónica básica aplicada
-    </div>
-
-    <div class="card">
-      <strong>Bloque 3:</strong> Arduino y control electrónico
-    </div>
-
-    <div class="card">
-      <strong>Bloque 4:</strong> Sistemas automotrices integrados
-    </div>
-
+  <div class="card">
+    <strong>Bloque 3:</strong> Control electrónico con Arduino  
+    <p>Entradas, salidas, lógica de control y sensores.</p>
   </div>
 
-  <!-- METODOLOGIA -->
-  <div class="section">
-    <h2>Metodología</h2>
-    <ul>
-      <li>Aprendizaje basado en práctica</li>
-      <li>Simulación + implementación real</li>
-      <li>Ejercicios en 3 niveles de dificultad</li>
-      <li>Enfoque en diagnóstico de sistemas</li>
-    </ul>
+  <div class="card">
+    <strong>Bloque 4:</strong> Sistemas automotrices integrados  
+    <p>Integración de sensores, actuadores y controladores.</p>
   </div>
 
-  <!-- PROYECTO -->
-  <div class="section">
-    <h2>Proyecto integrador</h2>
-    <p>
-      Sistema de refrigeración automotriz:
-      sensor de temperatura → controlador → electroventilador.
-    </p>
-  </div>
+</div>
 
-  <!-- CONTENIDO -->
-  <div class="section">
-    <h2>Contenido del curso</h2>
-    <ul>
-      <li>25 clases estructuradas</li>
-      <li>Presentaciones técnicas</li>
-      <li>Infografías</li>
-      <li>Prácticas guiadas</li>
-      <li>Proyectos reales</li>
-    </ul>
-  </div>
+<!-- METODOLOGIA -->
+<div class="section">
+  <h2>Metodología de trabajo</h2>
+  <ul>
+    <li>Aprendizaje basado en la práctica</li>
+    <li>Simulación (Tinkercad) + implementación real</li>
+    <li>Ejercicios progresivos (nivel 1, 2 y 3)</li>
+    <li>Resolución de problemas reales</li>
+    <li>Relación constante con sistemas automotrices</li>
+  </ul>
+</div>
 
-  <!-- BOTONES -->
-  <div class="section">
-    <h2>Acceder al contenido</h2>
+<!-- PROYECTO -->
+<div class="section">
+  <h2>Proyecto integrador</h2>
+  <p>
+    Desarrollo de un sistema de refrigeración automotriz donde el estudiante integra:
+  </p>
 
-    <a href="LINK_A_TU_REPO_BLOQUE_1" class="btn">Bloque 1</a>
-    <a href="LINK_A_TU_REPO_BLOQUE_2" class="btn">Bloque 2</a>
-    <a href="LINK_A_TU_REPO_BLOQUE_3" class="btn">Bloque 3</a>
-    <a href="LINK_A_TU_REPO_BLOQUE_4" class="btn">Bloque 4</a>
+  <ul>
+    <li>Sensor de temperatura</li>
+    <li>Controlador (Arduino)</li>
+    <li>Relé</li>
+    <li>Electroventilador</li>
+  </ul>
 
-  </div>
+  <p class="highlight">
+    Este sistema representa el modelo real: sensor → decisión → acción.
+  </p>
+</div>
+
+<!-- CONTENIDO -->
+<div class="section">
+  <h2>Material desarrollado</h2>
+  <ul>
+    <li>25 clases estructuradas</li>
+    <li>Presentaciones técnicas por clase</li>
+    <li>Infografías didácticas</li>
+    <li>Guías de prácticas con distintos niveles</li>
+    <li>Proyectos aplicados</li>
+  </ul>
+</div>
+
+<!-- ACCESO -->
+<div class="section">
+  <h2>Acceso al contenido del curso</h2>
+
+  <!-- BLOQUE 1 -->
+  <div class="block-title">Bloque 1</div>
+  <a href="LINK_PRESENTACION_B1" class="btn">Presentaciones</a>
+  <a href="LINK_INFOGRAFIAS_B1" class="btn">Infografías</a>
+  <a href="LINK_PRACTICAS_B1" class="btn">Prácticas</a>
+
+  <!-- BLOQUE 2 -->
+  <div class="block-title">Bloque 2</div>
+  <a href="LINK_PRESENTACION_B2" class="btn">Presentaciones</a>
+  <a href="LINK_INFOGRAFIAS_B2" class="btn">Infografías</a>
+  <a href="LINK_PRACTICAS_B2" class="btn">Prácticas</a>
+
+  <!-- BLOQUE 3 -->
+  <div class="block-title">Bloque 3</div>
+  <a href="LINK_PRESENTACION_B3" class="btn">Presentaciones</a>
+  <a href="LINK_INFOGRAFIAS_B3" class="btn">Infografías</a>
+  <a href="LINK_PRACTICAS_B3" class="btn">Prácticas</a>
+
+  <!-- BLOQUE 4 -->
+  <div class="block-title">Bloque 4</div>
+  <a href="LINK_PRESENTACION_B4" class="btn">Presentaciones</a>
+  <a href="LINK_INFOGRAFIAS_B4" class="btn">Infografías</a>
+  <a href="LINK_PRACTICAS_B4" class="btn">Prácticas</a>
+
+</div>
 
 </div>
 
