@@ -628,7 +628,177 @@
       <p style="color: var(--text-light); font-size: 1rem; max-width: 900px; margin-bottom: 1.5rem;">
 Trabajos aplicados en tres frentes: diseño de experiencias de aprendizaje técnico, learning analytics y tecnología educativa. Cada proyecto nace de un problema real de aula, taller u operación.
   </p>
-      <!-- PRIORITY 1: INDUSTRIAL / ANALYTICS -->
+      <!-- PRIORITY 2: LEARNING STRATEGY -->
+
+<div class="main-category-card" id="cat-learning">
+
+  <div class="category-header">
+    <img src="https://alexis-gerez.github.io/proyectos-arduino-autotech/img/p7-diagrama-agua.jpg?raw=true" alt="Learning Strategy" class="category-header-img">
+    
+    <div class="category-content">
+      <h3 style="border-left: 5px solid var(--accent-color); padding-left: 1rem;">
+        Learning Strategy & Technical Training Design
+      </h3>
+
+      <p style="color: var(--text-light); font-size: 0.95rem; margin: 0.8rem 0 1.2rem 0;">
+        Enfoque de diseño de formación técnica basado en simulación de sistemas reales, diagnóstico práctico y desarrollo de competencias aplicadas a entornos industriales y automotrices. 
+        Este enfoque fue implementado en el desarrollo de un curso completo de formación técnica, validando su aplicación en un entorno educativo real.
+      </p>
+
+      <div class="category-actions">
+        <button class="btn-toggle" onclick="toggleSection('cat-learning')">
+          <span>Ver caso</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENIDO DESPLEGABLE -->
+  <div class="collapsible-wrapper">
+    <div class="collapsible-content">
+      <div class="trabajos-container">
+
+<!-- CASO DE ESTUDIO -->
+<div class="trabajo-item case-study">
+  <div>
+
+    <h4>Caso integrador: diseño de un sistema de control automotriz aplicado a formación técnica</h4>
+
+    <h5>El problema real</h5>
+    <p>
+    En el diagnóstico automotriz, los sistemas no fallan en teoría. Fallan en la práctica: sensores que envían señales incorrectas,
+    actuadores que no responden y técnicos que deben interpretar el comportamiento del sistema para tomar decisiones.
+    </p>
+
+    <p>
+    La formación técnica tradicional suele enseñar primero la teoría y luego su aplicación. Sin embargo, en el entorno real ocurre lo contrario:
+    primero aparece la falla y luego se comprende el sistema.
+    </p>
+
+    <h5>El sistema integrador: refrigeración automotriz</h5>
+    <p>
+    Para trasladar esta lógica al aprendizaje, se diseñó un sistema basado en el funcionamiento del sistema de refrigeración de un automóvil,
+    donde intervienen sensores, controlador y actuadores.
+    </p>
+
+    <ul>
+      <li>Sensor de temperatura (entrada del sistema)</li>
+      <li>Controlador (Arduino / lógica de decisión)</li>
+      <li>Actuador (electroventilador mediante relé)</li>
+      <li>Visualización de datos (pantalla o monitoreo)</li>
+    </ul>
+
+    <p>
+    Este sistema permite replicar una situación real: el motor aumenta su temperatura y el sistema debe responder automáticamente,
+    activando el ventilador según condiciones definidas.
+    </p>
+
+    <h5>Modelo de funcionamiento</h5>
+    <p>
+    sensor → procesamiento → decisión → actuación
+    </p>
+
+    <p>
+    El estudiante no memoriza conceptos: interpreta señales, analiza el comportamiento del sistema y comprende la lógica de control.
+    </p>
+
+    <h5>De sistema técnico a sistema de formación</h5>
+    <p>
+    A partir de este modelo, se estructuró el curso <strong>Tecnología de Control Automotriz</strong>, organizado en bloques progresivos:
+    </p>
+
+    <ul>
+      <li>Fundamentos eléctricos (medición, ley de Ohm, circuitos)</li>
+      <li>Componentes electrónicos (diodos, relés, transistores)</li>
+      <li>Control electrónico (Arduino, lógica, sensores)</li>
+      <li>Sistemas integrados (aplicaciones automotrices reales)</li>
+    </ul>
+
+    <p>
+    Cada bloque combina:
+    </p>
+
+    <ul>
+      <li>Explicación conceptual</li>
+      <li>Simulación (Tinkercad)</li>
+      <li>Práctica en hardware real</li>
+      <li>Ejercicios escalonados (nivel 1 a 3)</li>
+      <li>Aplicación en sistemas automotrices</li>
+    </ul>
+
+    <h5>Metodología aplicada</h5>
+    <p>
+    El aprendizaje se basa en resolución de problemas, donde el estudiante:
+    </p>
+
+    <ul>
+      <li>Observa el sistema</li>
+      <li>Interpreta señales</li>
+      <li>Identifica fallas</li>
+      <li>Toma decisiones técnicas</li>
+    </ul>
+    <h5>Objetivos de aprendizaje (taxonomía de Bloom)</h5>
+   <ul>
+  <li>Identificar y describir los componentes del sistema (recordar)</li>
+  <li>Interpretar señales de sensores y comportamiento del circuito (comprender / aplicar)</li>
+  <li>Diagnosticar fallas a partir de mediciones (analizar)</li>
+  <li>Proponer y validar intervenciones de reparación (evaluar / crear)</li>
+   </ul>
+
+<h5>Evaluación</h5>
+<ul>
+  <li>Rúbrica cuantitativa de precisión de diagnóstico</li>
+  <li>Ejercicios escalonados por dificultad (niveles 1 a 3) con validación práctica</li>
+  <li>Autoevaluación mediante simulación previa (Tinkercad)</li>
+</ul>
+
+<h5>Implementación</h5>
+<p>Implementado en aula real desde 2022 en escuelas técnicas de CABA, con ~70 estudiantes por año.</p>
+
+    <h5>Competencias desarrolladas</h5>
+    <ul>
+      <li>Diagnóstico de sistemas electrónicos</li>
+      <li>Comprensión de lógica de control</li>
+      <li>Integración sensor–actuador</li>
+      <li>Pensamiento sistémico</li>
+      <li>Aplicación en entornos reales</li>
+    </ul>
+
+    <h5>Transferencia a la industria</h5>
+    <p>
+    Este enfoque replica la lógica utilizada en sistemas reales de la industria automotriz e industrial:
+    control de temperatura, presión, flujo y variables críticas mediante sensores y actuadores.
+    </p>
+
+    <p>
+    Permite reducir la brecha entre formación y práctica, facilitando la adaptación del estudiante a entornos técnicos reales.
+    </p>
+
+    <h5>Impacto</h5>
+    <p>
+    El resultado es un sistema de formación alineado con la realidad del campo técnico, donde el aprendizaje ocurre a través de la experiencia,
+    el análisis y la toma de decisiones, y no mediante la memorización de contenido.
+    </p>
+
+    <div class="trabajo-item-icons">
+      <i class="fas fa-car" title="Automotive Systems"></i>
+      <i class="fas fa-microchip" title="Control Systems"></i>
+      <i class="fas fa-cogs" title="Integration"></i>
+      <i class="fas fa-graduation-cap" title="Technical Training"></i>
+    </div>
+  </div>
+
+ <a href="https://alexis-gerez.github.io/Tecnologia-de-control/" class="btn">
+  Acceder a la plataforma del curso
+</a>
+</div>
+
+  </div>
+    </div>
+  </div>
+</div>
+<!-- PRIORITY 1: INDUSTRIAL / ANALYTICS -->
      <div class="main-category-card" id="cat-analytics">
 
   <div class="category-header">
@@ -862,176 +1032,7 @@ Herramientas analíticas diseñadas para optimizar procesos técnicos y operativ
           </div>   <!-- FIN collapsible-wrapper -->
           </div>     <!-- 🔥 CIERRE REAL DE cat-analytics -->
 
-<!-- PRIORITY 2: LEARNING STRATEGY -->
 
-<div class="main-category-card" id="cat-learning">
-
-  <div class="category-header">
-    <img src="https://alexis-gerez.github.io/proyectos-arduino-autotech/img/p7-diagrama-agua.jpg?raw=true" alt="Learning Strategy" class="category-header-img">
-    
-    <div class="category-content">
-      <h3 style="border-left: 5px solid var(--accent-color); padding-left: 1rem;">
-        Learning Strategy & Technical Training Design
-      </h3>
-
-      <p style="color: var(--text-light); font-size: 0.95rem; margin: 0.8rem 0 1.2rem 0;">
-        Enfoque de diseño de formación técnica basado en simulación de sistemas reales, diagnóstico práctico y desarrollo de competencias aplicadas a entornos industriales y automotrices. 
-        Este enfoque fue implementado en el desarrollo de un curso completo de formación técnica, validando su aplicación en un entorno educativo real.
-      </p>
-
-      <div class="category-actions">
-        <button class="btn-toggle" onclick="toggleSection('cat-learning')">
-          <span>Ver caso</span>
-          <i class="fas fa-chevron-down"></i>
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- CONTENIDO DESPLEGABLE -->
-  <div class="collapsible-wrapper">
-    <div class="collapsible-content">
-      <div class="trabajos-container">
-
-<!-- CASO DE ESTUDIO -->
-<div class="trabajo-item case-study">
-  <div>
-
-    <h4>Caso integrador: diseño de un sistema de control automotriz aplicado a formación técnica</h4>
-
-    <h5>El problema real</h5>
-    <p>
-    En el diagnóstico automotriz, los sistemas no fallan en teoría. Fallan en la práctica: sensores que envían señales incorrectas,
-    actuadores que no responden y técnicos que deben interpretar el comportamiento del sistema para tomar decisiones.
-    </p>
-
-    <p>
-    La formación técnica tradicional suele enseñar primero la teoría y luego su aplicación. Sin embargo, en el entorno real ocurre lo contrario:
-    primero aparece la falla y luego se comprende el sistema.
-    </p>
-
-    <h5>El sistema integrador: refrigeración automotriz</h5>
-    <p>
-    Para trasladar esta lógica al aprendizaje, se diseñó un sistema basado en el funcionamiento del sistema de refrigeración de un automóvil,
-    donde intervienen sensores, controlador y actuadores.
-    </p>
-
-    <ul>
-      <li>Sensor de temperatura (entrada del sistema)</li>
-      <li>Controlador (Arduino / lógica de decisión)</li>
-      <li>Actuador (electroventilador mediante relé)</li>
-      <li>Visualización de datos (pantalla o monitoreo)</li>
-    </ul>
-
-    <p>
-    Este sistema permite replicar una situación real: el motor aumenta su temperatura y el sistema debe responder automáticamente,
-    activando el ventilador según condiciones definidas.
-    </p>
-
-    <h5>Modelo de funcionamiento</h5>
-    <p>
-    sensor → procesamiento → decisión → actuación
-    </p>
-
-    <p>
-    El estudiante no memoriza conceptos: interpreta señales, analiza el comportamiento del sistema y comprende la lógica de control.
-    </p>
-
-    <h5>De sistema técnico a sistema de formación</h5>
-    <p>
-    A partir de este modelo, se estructuró el curso <strong>Tecnología de Control Automotriz</strong>, organizado en bloques progresivos:
-    </p>
-
-    <ul>
-      <li>Fundamentos eléctricos (medición, ley de Ohm, circuitos)</li>
-      <li>Componentes electrónicos (diodos, relés, transistores)</li>
-      <li>Control electrónico (Arduino, lógica, sensores)</li>
-      <li>Sistemas integrados (aplicaciones automotrices reales)</li>
-    </ul>
-
-    <p>
-    Cada bloque combina:
-    </p>
-
-    <ul>
-      <li>Explicación conceptual</li>
-      <li>Simulación (Tinkercad)</li>
-      <li>Práctica en hardware real</li>
-      <li>Ejercicios escalonados (nivel 1 a 3)</li>
-      <li>Aplicación en sistemas automotrices</li>
-    </ul>
-
-    <h5>Metodología aplicada</h5>
-    <p>
-    El aprendizaje se basa en resolución de problemas, donde el estudiante:
-    </p>
-
-    <ul>
-      <li>Observa el sistema</li>
-      <li>Interpreta señales</li>
-      <li>Identifica fallas</li>
-      <li>Toma decisiones técnicas</li>
-    </ul>
-    <h5>Objetivos de aprendizaje (taxonomía de Bloom)</h5>
-   <ul>
-  <li>Identificar y describir los componentes del sistema (recordar)</li>
-  <li>Interpretar señales de sensores y comportamiento del circuito (comprender / aplicar)</li>
-  <li>Diagnosticar fallas a partir de mediciones (analizar)</li>
-  <li>Proponer y validar intervenciones de reparación (evaluar / crear)</li>
-   </ul>
-
-<h5>Evaluación</h5>
-<ul>
-  <li>Rúbrica cuantitativa de precisión de diagnóstico</li>
-  <li>Ejercicios escalonados por dificultad (niveles 1 a 3) con validación práctica</li>
-  <li>Autoevaluación mediante simulación previa (Tinkercad)</li>
-</ul>
-
-<h5>Implementación</h5>
-<p>Implementado en aula real desde 2022 en escuelas técnicas de CABA, con ~70 estudiantes por año.</p>
-
-    <h5>Competencias desarrolladas</h5>
-    <ul>
-      <li>Diagnóstico de sistemas electrónicos</li>
-      <li>Comprensión de lógica de control</li>
-      <li>Integración sensor–actuador</li>
-      <li>Pensamiento sistémico</li>
-      <li>Aplicación en entornos reales</li>
-    </ul>
-
-    <h5>Transferencia a la industria</h5>
-    <p>
-    Este enfoque replica la lógica utilizada en sistemas reales de la industria automotriz e industrial:
-    control de temperatura, presión, flujo y variables críticas mediante sensores y actuadores.
-    </p>
-
-    <p>
-    Permite reducir la brecha entre formación y práctica, facilitando la adaptación del estudiante a entornos técnicos reales.
-    </p>
-
-    <h5>Impacto</h5>
-    <p>
-    El resultado es un sistema de formación alineado con la realidad del campo técnico, donde el aprendizaje ocurre a través de la experiencia,
-    el análisis y la toma de decisiones, y no mediante la memorización de contenido.
-    </p>
-
-    <div class="trabajo-item-icons">
-      <i class="fas fa-car" title="Automotive Systems"></i>
-      <i class="fas fa-microchip" title="Control Systems"></i>
-      <i class="fas fa-cogs" title="Integration"></i>
-      <i class="fas fa-graduation-cap" title="Technical Training"></i>
-    </div>
-  </div>
-
- <a href="https://alexis-gerez.github.io/Tecnologia-de-control/" class="btn">
-  Acceder a la plataforma del curso
-</a>
-</div>
-
-  </div>
-    </div>
-  </div>
-</div>
 <!-- PRIORITY 3: DEVELOPMENT & EDUCATION -->
 
       <h3 style="border-left: 5px solid var(--accent-color); padding-left: 1rem;">Desarrollo Tecnológico & Educación Técnica</h3>
